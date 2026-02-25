@@ -44,7 +44,7 @@ export default function Navbar() {
     <header
       className={`
         fixed top-0 left-0 w-full z-50
-        bg-white border-b transition-transform duration-300
+        beige border-b transition-transform duration-300
         ${visible ? "translate-y-0" : "-translate-y-full"}
       `}
     >
@@ -66,7 +66,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="bg-green-900 text-white px-4 py-2 rounded hover:bg-green-800"
+            className="green text-white px-4 py-2 rounded hover:bg-green-800"
           >
             Réserver
           </Link>

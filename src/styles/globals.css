@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.green {
+  background: #3a4b3c;
+}
+
+.beige {
+  background: #EBE2D6;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}

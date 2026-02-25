@@ -1,14 +1,18 @@
-import { siteContent } from "@/content/site";
+import Hero from "@/components/section/hero";
+import FeaturesBar from "@/components/section/featuresBar";
 
 export default function Home() {
   return (
-    <div className="text-center space-y-6">
-      <h1 className="text-4xl font-bold">{siteContent.name}</h1>
-      <p className="text-xl text-gray-600">{siteContent.tagline}</p>
-
-      <div className="bg-green-900 text-white p-10 rounded-lg">
-        Hero image placeholder
+    <>
+      {/* HERO full-bleed (sort du main centré) */}
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+        <Hero />
       </div>
-    </div>
+
+      {/* BANDEAU full-bleed */}
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+        <FeaturesBar />
+      </div>
+    </>
   );
 }
