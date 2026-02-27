@@ -14,9 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className="bg-gray-50 text-gray-800">
+      <body className="bg-[#EBE2D6] text-[#3a4b3c]">
         <Navbar />
-        <main className="min-h-screen max-w-6xl mx-auto px-4 py-8">
+        <main className="w-full">
           {children}
         </main>
         <Footer />

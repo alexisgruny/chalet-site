@@ -26,14 +26,13 @@ export default function FeaturesBar() {
     <section className="w-full bg-[#EBE2D6]">
       <div className="w-full px-4 py-8">
         <div className="max-w-6xl mx-auto">
-          {/* 2 étages : md=3 colonnes => 5 items = 2 lignes */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6 place-items-center">
             {features.map(({ label, icon: Icon }) => (
               <div
                 key={label}
-                className="w-full max-w-[320px] flex items-center gap-3 rounded-2xl bg-white/45 p-4 text-[#3a4b3c]"
+                className="w-full max-w-[320px] bg-white/45 backdrop-blur rounded-xl flex items-center gap-3  p-4 text-[#3a4b3c] shadow-md"
               >
-                <div className="h-12 w-12 rounded-xl bg-white/70 backdrop-blur flex items-center justify-center shadow-sm">
+                <div className="h-12 w-12 flex items-center justify-center ">
                   <Icon className="h-5 w-5" />
                 </div>
 

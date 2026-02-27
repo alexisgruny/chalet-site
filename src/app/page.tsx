@@ -1,18 +1,22 @@
 import Hero from "@/components/section/hero";
 import FeaturesBar from "@/components/section/featuresBar";
+import GalleryPreview from "@/components/section/galleryPreview";
+import Description from "@/components/section/description";
+import CallToAction from "@/components/section/callToAction";
 
 export default function Home() {
   return (
     <>
-      {/* HERO full-bleed (sort du main centré) */}
-      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+      {/* HERO */}
         <Hero />
-      </div>
-
-      {/* BANDEAU full-bleed */}
-      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+      {/* BANDEAU INFO*/}
         <FeaturesBar />
-      </div>
-    </>
+      {/* DESCRIPTION */}
+        <Description />
+      {/* GALERIE */}
+       <GalleryPreview />
+      {/* CALL TO ACTION */}
+        <CallToAction />
+      </>
   );
 }
