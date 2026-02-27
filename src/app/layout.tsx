@@ -3,8 +3,8 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
 export const metadata = {
-  title: "Chalet des Cimes",
-  description: "Location de chalet à la montagne",
+  title: "Chalet JAIA",
+  description: "Chalet chaleureux a Gérardmer",
 };
 
 export default function RootLayout({
