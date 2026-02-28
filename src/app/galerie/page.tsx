@@ -1,8 +1,14 @@
-export default function ChaletPage() {
+import GalleryClient from "@/components/section/galleryClient";
+
+export const metadata = {
+  title: "Galerie — Chalet Jaïa",
+  description: "Photos du Chalet Jaïa à Gérardmer : intérieur, extérieur, chambres, cuisine.",
+};
+
+export default function GaleriePage() {
   return (
-    <div className="space-y-4">
-      <h1 className="text-3xl font-bold">Le Chalet</h1>
-      <p>Description du chalet à venir.</p>
-    </div>
+    <main className="min-h-screen pt-16">
+      <GalleryClient />
+    </main>
   );
 }

@@ -44,7 +44,7 @@ export default function Navbar() {
     <header
       className={`
         fixed top-0 left-0 w-full z-50
-        beige border-b transition-transform duration-300
+        beige border-b border-black/10 transition-transform duration-300 shadow-md
         ${visible ? "translate-y-0" : "-translate-y-full"}
       `}
     >
