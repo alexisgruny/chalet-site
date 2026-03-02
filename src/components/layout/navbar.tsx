@@ -7,6 +7,7 @@ import { navLinks } from "@/lib/routes";
 export default function Navbar() {
   const [visible, setVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,7 +16,7 @@ export default function Navbar() {
       // Si on scroll vers le bas → cacher
       if (currentScroll > lastScroll && currentScroll > 80) {
         setVisible(false);
-      } 
+      }
       // Si on scroll vers le haut → montrer
       else {
         setVisible(true);
@@ -44,15 +45,15 @@ export default function Navbar() {
     <header
       className={`
         fixed top-0 left-0 w-full z-50
-        beige border-b border-black/10 transition-transform duration-300 shadow-md
+        bg-[#EBE2D6] border-b border-black/10 transition-transform duration-300 shadow-md
         ${visible ? "translate-y-0" : "-translate-y-full"}
       `}
     >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl text-green-900">
-          Chalet JAIA
-        </Link>
-
+        <Link href="/" className="font-bold text-xl text-green-900"> Chalet JAIA </Link>
+        <button className="md:hidden text-green-900" onClick={() => setOpen(!open)}>
+          ☰
+        </button>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
@@ -71,6 +72,32 @@ export default function Navbar() {
             Réserver
           </Link>
         </nav>
+
+        {/* Menu mobile */}
+        {open && (
+          <div className="md:hidden absolute top-full left-0 bg-[#3a4b3c] w-full border-t border-white/10 shadow-lg">
+            <nav className="flex flex-col p-4 gap-4 text-white">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="text-white text-lg font-medium"
+                >
+                  {link.label}
+                </Link>
+              ))}
+
+              <Link
+                href="/contact"
+                onClick={() => setOpen(false)}
+                className="bg-[#EBE2D6] text-green-900 px-6 py-2 rounded-full flex items-center justify-center font-semibold"
+              >
+                Réserver
+              </Link>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
