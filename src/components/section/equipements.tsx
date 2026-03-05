@@ -2,9 +2,10 @@
 
 export default function Equipements() {
 
-    return (
-        <section className="space-y-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#3a4b3c]">
+  return (
+    <section className="section-beige">
+      <div className="container-section">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#3a4b3c] mb-8">
           Équipements
         </h2>
 
@@ -42,21 +43,22 @@ export default function Equipements() {
             ]}
           />
         </div>
-      </section>
+      </div>
+    </section>
 
-    );
-    
-    function EquipCard({ title, items }: { title: string; items: string[] }) {
-  return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-      <h3 className="font-bold text-lg text-[#3a4b3c]">{title}</h3>
-      <ul className="mt-4 space-y-2 text-gray-700">
-        {items.map((t) => (
-          <li key={t}>• {t}</li>
-        ))}
-      </ul>
-    </div>
   );
-}
+
+  function EquipCard({ title, items }: { title: string; items: string[] }) {
+    return (
+      <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h3 className="font-bold text-lg text-[#3a4b3c]">{title}</h3>
+        <ul className="mt-4 space-y-2 text-gray-700">
+          {items.map((t) => (
+            <li key={t}>• {t}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 
 }

@@ -1,8 +1,9 @@
 export default function Couchage() {
 return (
 
-<section className="space-y-6">
-  <h2 className="text-2xl md:text-3xl font-bold text-[#3a4b3c]">
+<section className="section-green">
+  <div className="container-section">
+  <h2 className="title-section-green">
     Activités autour du chalet
   </h2>
 
@@ -25,6 +26,7 @@ return (
         <li>• Parapente, Bol d’Air (La Bresse)</li>
       </ul>
     </div>
+  </div>
   </div>
 </section>
 );
