@@ -67,7 +67,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="green text-white px-4 py-2 rounded hover:bg-green-800"
+            className="bg-[#3a4b3c] text-white px-4 py-2 rounded hover:bg-green-800"
           >
             Réserver
           </Link>
@@ -91,7 +91,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="bg-[#EBE2D6] text-green-900 px-6 py-2 rounded-full flex items-center justify-center font-semibold"
+                className="bg-[#3a4b3c] text-green-900 px-6 py-2 rounded-full flex items-center justify-center font-semibold"
               >
                 Réserver
               </Link>

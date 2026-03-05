@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function GalleryPreview() {
     return (
-        <section className="bg-[#EBE2D6] py-16">
+        <section className="section-beige py-16">
             <div className="space-y-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 px-4 md:px-6">
                     {[

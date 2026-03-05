@@ -14,11 +14,11 @@ export default function Hero() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/45" />
+      <div className="absolute inset-0 bg-black/25" />
 
       {/* Content */}
       <div className="absolute inset-0 flex items-stretch">
-        <div className="green opacity-80 backdrop-blur-sm w-full md:w-1/3 h-full flex items-center justify-center p-8 md:p-12">
+        <div className="bg-[#3a4b3c] opacity-80 backdrop-blur-sm w-full md:w-1/3 h-full flex items-center justify-center p-8 md:p-12">
             <div className="space-y-4 max-w-md">
             <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
               Chalet cosy à la montagne
@@ -41,7 +41,7 @@ export default function Hero() {
             <div className="flex gap-3 pt-2">
               <Link
                 href="/chalet"
-                className="beige text-gray-900 px-5 py-3 rounded-lg font-semibold hover:bg-white/90"
+                className="bg-[#EBE2D6] text-gray-900 px-5 py-3 rounded-lg font-semibold hover:bg-white/90"
               >
                 Découvrir le chalet
               </Link>
