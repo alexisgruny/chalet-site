@@ -38,6 +38,7 @@ export default function FeaturesBar() {
               </div>
             ))}
         </div>
+        </div>
     </section>
   );
 }
