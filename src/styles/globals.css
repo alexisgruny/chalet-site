@@ -1,18 +1,8 @@
 @import "tailwindcss";
 
-:root {
-  --color-green: #3a4b3c;
-  --color-beige: #EBE2D6;
-}
-
-@theme inline {
-  --color-green: var(--color-green);
-  --color-beige: var(--color-beige);
-}
-
 body {
-  background-color: var(--color-beige);
-  color: var(--color-green);
+  background-color: #EBE2D6;
+  color: #3a4b3c;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -39,9 +29,14 @@ body {
   @apply text-2xl md:text-3xl font-bold text-[#3a4b3c] mb-4;
 }
 
-/* ── Carte ── */
+/* ── Cartes ── */
 .card {
   @apply rounded-2xl border border-gray-200 bg-white p-6 shadow-sm;
+}
+
+/* Carte pour sections vertes */
+.card-dark {
+  @apply rounded-2xl bg-white/10 p-6;
 }
 
 /* ── Boutons ── */

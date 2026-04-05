@@ -16,19 +16,6 @@ const photos: Photo[] = [
     { src: "/images/chalet/chalet1.jpg", alt: "Salon du chalet", category: "Salon" },
     { src: "/images/chalet/chalet2.jpg", alt: "Cuisine équipée", category: "Cuisine" },
     { src: "/images/chalet/chalet3.jpg", alt: "Chambre du chalet", category: "Chambres" },
-    { src: "/images/chalet/chaletHero.jpg", alt: "Vue extérieure du chalet", category: "Extérieur" },
-    { src: "/images/chalet/chalet1.jpg", alt: "Salon du chalet", category: "Salon" },
-    { src: "/images/chalet/chalet2.jpg", alt: "Cuisine équipée", category: "Cuisine" },
-    { src: "/images/chalet/chalet3.jpg", alt: "Chambre du chalet", category: "Chambres" },
-    { src: "/images/chalet/chaletHero.jpg", alt: "Vue extérieure du chalet", category: "Extérieur" },
-    { src: "/images/chalet/chalet1.jpg", alt: "Salon du chalet", category: "Salon" },
-    { src: "/images/chalet/chalet2.jpg", alt: "Cuisine équipée", category: "Cuisine" },
-    { src: "/images/chalet/chalet3.jpg", alt: "Chambre du chalet", category: "Chambres" },
-    { src: "/images/chalet/chaletHero.jpg", alt: "Vue extérieure du chalet", category: "Extérieur" },
-    { src: "/images/chalet/chalet1.jpg", alt: "Salon du chalet", category: "Salon" },
-    { src: "/images/chalet/chalet2.jpg", alt: "Cuisine équipée", category: "Cuisine" },
-    { src: "/images/chalet/chalet3.jpg", alt: "Chambre du chalet", category: "Chambres" },
-    { src: "/images/chalet/chaletHero.jpg", alt: "Vue extérieure du chalet", category: "Extérieur" },
     // Ajoute tes photos ici (idéalement 12–24)
 ];
 
@@ -55,7 +42,7 @@ export default function GalleryClient() {
         <section className="w-full">
             {/* Tabs (centré) */}
             <div className="bg-[#3a4b3c] w-full">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 py-12 space-y-6">
+        <div className="container-section py-12 space-y-6">
           
           <div className="space-y-3">
             <h1 className="text-3xl md:text-4xl font-bold text-white">

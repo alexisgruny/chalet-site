@@ -11,6 +11,7 @@ export default function Hero() {
         fill
         priority
         className="object-cover"
+        sizes="100vw"
       />
 
       {/* Overlay */}
@@ -39,10 +40,7 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-3 pt-2">
-              <Link
-                href="/chalet"
-                className="bg-[#EBE2D6] text-gray-900 px-5 py-3 rounded-lg font-semibold hover:bg-white/90"
-              >
+              <Link href="/chalet" className="btn-secondary">
                 Découvrir le chalet
               </Link>
             </div>
