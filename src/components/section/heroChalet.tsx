@@ -23,7 +23,7 @@ return (
           {/* Content */}
         <div className="absolute inset-0 flex items-end">
           <div className="w-full">
-            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 pb-10">
+            <div className="container-section pb-10">
               <h1 className="text-3xl md:text-5xl font-bold text-white">
                 Location chalet à Gérardmer – Chalet Jaïa
               </h1>
@@ -56,16 +56,10 @@ return (
               <div className="flex gap-3 mt-6">
 
                 {/* CTA */}
-                <Link
-                  href="/contact"
-                  className="green text-white px-6 py-3 rounded-full inline-flex items-center justify-center font-semibold hover:opacity-90 transition"
-                >
+                <Link href="/contact" className="btn-primary">
                   Demander une réservation
                 </Link>
-                <Link
-                  href="/galerie"
-                  className="bg-white text-gray-900 px-6 py-3 rounded-full inline-flex items-center justify-center font-semibold hover:bg-white/90 transition"
-                >
+                <Link href="/galerie" className="btn-secondary">
                   Voir les photos
                 </Link>
               </div>

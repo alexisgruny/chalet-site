@@ -1,8 +1,8 @@
 export default function CallToAction() {
     return (
 
-        <section className="w-full bg-[#3a4b3c]">
-            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <section className="section-green">
+            <div className="container-section">
                 <div className="relative overflow-hidden rounded-3xl bg-[#EBE2D6] p-8 sm:p-10 lg:p-12 ring-1 ring-black/5 shadow-sm">
                     <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#3a4b3c]/10 blur-2xl" />
                     <div className="pointer-events-none absolute -left-24 -bottom-24 h-64 w-64 rounded-full bg-[#3a4b3c]/10 blur-2xl" />
@@ -20,16 +20,13 @@ export default function CallToAction() {
 
                         <div className="lg:col-span-4">
                             <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
-                                <a
-                                    href="#contact"
-                                    className="inline-flex items-center justify-center rounded-xl bg-[#3a4b3c] px-6 py-3 text-[#EBE2D6] font-medium shadow-sm hover:brightness-110 transition"
-                                >
+                                <a href="#contact" className="btn-primary">
                                     Nous contacter
                                 </a>
 
                                 <a
                                     href="#disponibilites"
-                                    className="inline-flex items-center justify-center rounded-xl border border-[#3a4b3c]/25 px-6 py-3 text-[#3a4b3c] font-medium hover:bg-[#3a4b3c]/5 transition"
+                                    className="inline-flex items-center justify-center rounded-full border border-[#3a4b3c]/25 px-6 py-3 text-[#3a4b3c] font-medium hover:bg-[#3a4b3c]/10 transition"
                                 >
                                     Voir les disponibilités
                                 </a>

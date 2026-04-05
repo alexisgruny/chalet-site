@@ -2,7 +2,7 @@ export default function Services() {
     return (
         <section className="section-green">
             <div className="container-section">
-            <h2 className="ttitle-section-green">
+            <h2 className="title-section-green">
                 Services
             </h2>
             <p className="text-[#EBE2D6]">

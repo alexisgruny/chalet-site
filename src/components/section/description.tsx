@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Description() {
     return (
         <section className="section-green">
-  <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+  <div className="container-section">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
 
       
@@ -50,10 +50,7 @@ export default function Description() {
           <div>• Lits faits & serviettes fournis</div>
           <div>• Arrivée autonome</div>
         </div>
-              <Link
-                href="/chalet"
-                className="bg-[#EBE2D6] text-gray-900 px-5 py-3 rounded-lg font-semibold hover:bg-white/90 items-center inline-flex  gap-2 mt-4"
-              >
+              <Link href="/chalet" className="btn-secondary gap-2 mt-4">
                 Voir les détails du chalet
               </Link>
       </div>

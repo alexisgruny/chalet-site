@@ -50,8 +50,8 @@ export default function Navbar() {
       `}
     >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl text-green-900"> Chalet JAIA </Link>
-        <button className="md:hidden text-green-900" onClick={() => setOpen(!open)}>
+        <Link href="/" className="font-bold text-xl text-[#3a4b3c]"> Chalet JAIA </Link>
+        <button className="md:hidden text-[#3a4b3c]" onClick={() => setOpen(!open)}>
           ☰
         </button>
         <nav className="hidden md:flex items-center gap-6">
@@ -59,16 +59,13 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-gray-700 hover:text-green-900"
+              className="text-[#3a4b3c]/70 hover:text-[#3a4b3c] transition"
             >
               {link.label}
             </Link>
           ))}
 
-          <Link
-            href="/contact"
-            className="bg-[#3a4b3c] text-white px-4 py-2 rounded hover:bg-green-800"
-          >
+          <Link href="/contact" className="btn-primary px-4 py-2 !rounded">
             Réserver
           </Link>
         </nav>
@@ -91,7 +88,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="bg-[#3a4b3c] text-green-900 px-6 py-2 rounded-full flex items-center justify-center font-semibold"
+                className="btn-secondary flex items-center justify-center"
               >
                 Réserver
               </Link>

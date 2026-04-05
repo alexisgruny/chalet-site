@@ -5,7 +5,7 @@ export default function Equipements() {
   return (
     <section className="section-beige">
       <div className="container-section">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#3a4b3c] mb-8">
+        <h2 className="title-section-beige mb-8">
           Équipements
         </h2>
 
@@ -50,9 +50,9 @@ export default function Equipements() {
 
   function EquipCard({ title, items }: { title: string; items: string[] }) {
     return (
-      <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+      <div className="card">
         <h3 className="font-bold text-lg text-[#3a4b3c]">{title}</h3>
-        <ul className="mt-4 space-y-2 text-gray-700">
+        <ul className="mt-4 space-y-2 text-[#3a4b3c]/70">
           {items.map((t) => (
             <li key={t}>• {t}</li>
           ))}

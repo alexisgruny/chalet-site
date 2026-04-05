@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#EBE2D6] text-[#3a4b3c]">
-  <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="section-beige">
+  <div className="container-section py-12">
     
     <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
       

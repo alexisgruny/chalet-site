@@ -1,45 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-green: #3a4b3c;
+  --color-beige: #EBE2D6;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-green: var(--color-green);
+  --color-beige: var(--color-beige);
 }
 
 body {
-  color: var(--foreground);
+  background-color: var(--color-beige);
+  color: var(--color-green);
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ── Sections ── */
 .section-green {
-   @apply bg-[#3a4b3c] text-white py-16;
+  @apply bg-[#3a4b3c] text-white py-16;
 }
 
 .section-beige {
-  @apply bg-[#EBE2D6] text-gray-800 py-16;
+  @apply bg-[#EBE2D6] text-[#3a4b3c] py-16;
 }
 
+/* ── Container ── */
 .container-section {
-  @apply mx-auto w-full max-w-6xl;
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
 }
 
+/* ── Titres ── */
 .title-section-green {
   @apply text-2xl md:text-3xl font-bold text-[#EBE2D6] mb-4;
 }
 
 .title-section-beige {
   @apply text-2xl md:text-3xl font-bold text-[#3a4b3c] mb-4;
+}
+
+/* ── Carte ── */
+.card {
+  @apply rounded-2xl border border-gray-200 bg-white p-6 shadow-sm;
+}
+
+/* ── Boutons ── */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-[#3a4b3c] px-6 py-3 text-[#EBE2D6] font-semibold hover:opacity-90 transition;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full bg-[#EBE2D6] px-6 py-3 text-[#3a4b3c] font-semibold hover:bg-white transition;
 }
