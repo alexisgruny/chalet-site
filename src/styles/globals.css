@@ -39,6 +39,24 @@ body {
   @apply rounded-2xl bg-white/10 p-6;
 }
 
+/* Contenu de carte */
+.card-title {
+  @apply font-bold text-lg text-[#3a4b3c];
+}
+
+.card-list {
+  @apply mt-4 space-y-2 text-[#3a4b3c]/70;
+}
+
+/* ── Texte ── */
+.text-muted {
+  @apply text-[#3a4b3c]/70;
+}
+
+.text-body-sm {
+  @apply text-sm text-[#3a4b3c]/70 leading-relaxed;
+}
+
 /* ── Boutons ── */
 .btn-primary {
   @apply inline-flex items-center justify-center rounded-full bg-[#3a4b3c] px-6 py-3 text-[#EBE2D6] font-semibold hover:opacity-90 transition;

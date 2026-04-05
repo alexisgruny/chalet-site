@@ -98,7 +98,7 @@ export default function LocalisationPage() {
 
               <div className="h-px bg-gray-100" />
 
-              <div className="space-y-2 text-sm text-[#3a4b3c]/70">
+              <div className="space-y-2 text-muted text-sm">
                 <p>L'adresse exacte est communiquée après confirmation de la réservation.</p>
                 <p>Coordonnées GPS transmises avec la confirmation de réservation.</p>
               </div>
@@ -174,7 +174,7 @@ export default function LocalisationPage() {
                 </div>
                 <ul className="space-y-2">
                   {content.map((line) => (
-                    <li key={line} className="text-sm text-[#3a4b3c]/70 leading-relaxed flex gap-2">
+                    <li key={line} className="text-body-sm flex gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#3a4b3c]/30 flex-shrink-0" />
                       {line}
                     </li>

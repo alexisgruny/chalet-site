@@ -9,8 +9,8 @@ return (
 
   <div className="grid gap-4 md:grid-cols-2">
     <div className="card">
-      <h3 className="font-bold text-lg text-[#3a4b3c]">Hiver</h3>
-      <ul className="mt-4 space-y-2 text-[#3a4b3c]/70">
+      <h3 className="card-title">Hiver</h3>
+      <ul className="card-list">
         <li>• Ski à Gérardmer + sentiers raquettes</li>
         <li>• Ski nordique</li>
         <li>• Station de ski La Bresse</li>
@@ -18,8 +18,8 @@ return (
     </div>
 
     <div className="card">
-      <h3 className="font-bold text-lg text-[#3a4b3c]">Été</h3>
-      <ul className="mt-4 space-y-2 text-[#3a4b3c]/70">
+      <h3 className="card-title">Été</h3>
+      <ul className="card-list">
         <li>• Lac de Gérardmer : baignade, pédalo, voile, canoë</li>
         <li>• Randonnées et VTT dans les Vosges</li>
         <li>• Lac de Longemer (Xonrupt)</li>

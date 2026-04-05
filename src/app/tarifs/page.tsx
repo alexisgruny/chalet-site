@@ -102,7 +102,7 @@ export default function TarifsPage() {
       <section className="section-beige">
         <div className="container-section">
           <h2 className="title-section-beige">Prix selon la saison</h2>
-          <p className="text-[#3a4b3c]/70 mb-8 max-w-2xl">
+          <p className="text-muted mb-8 max-w-2xl">
             Tous les tarifs sont indiqués charges incluses (linge, ménage, Wi-Fi).
           </p>
 
@@ -128,11 +128,11 @@ export default function TarifsPage() {
 
                 <div className="space-y-2 pt-2 border-t border-gray-100">
                   <div className="flex items-baseline justify-between">
-                    <span className="text-[#3a4b3c]/70 text-sm">Semaine</span>
+                    <span className="text-muted text-sm">Semaine</span>
                     <span className="text-2xl font-bold text-[#3a4b3c]">{week}</span>
                   </div>
                   <div className="flex items-baseline justify-between">
-                    <span className="text-[#3a4b3c]/70 text-sm">Week-end</span>
+                    <span className="text-muted text-sm">Week-end</span>
                     <span className="text-xl font-semibold text-[#3a4b3c]">{weekend}</span>
                   </div>
                 </div>
@@ -181,7 +181,7 @@ export default function TarifsPage() {
             {conditions.map(({ title, body }) => (
               <div key={title} className="card">
                 <h3 className="font-bold text-[#3a4b3c]">{title}</h3>
-                <p className="text-[#3a4b3c]/70 mt-2 text-sm leading-relaxed">{body}</p>
+                <p className="text-body-sm mt-2">{body}</p>
               </div>
             ))}
           </div>

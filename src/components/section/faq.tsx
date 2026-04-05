@@ -29,7 +29,7 @@ export default function Services() {
           ].map(({ q, a }) => (
             <div key={q} className="card">
               <h3 className="font-bold text-[#3a4b3c]">{q}</h3>
-              <p className="text-[#3a4b3c]/70 mt-2">{a}</p>
+              <p className="text-muted mt-2">{a}</p>
             </div>
           ))}
         </div>
