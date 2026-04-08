@@ -51,8 +51,13 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="font-bold text-xl text-[#3a4b3c]"> Chalet JAIA </Link>
-        <button className="md:hidden text-[#3a4b3c]" onClick={() => setOpen(!open)}>
-          ☰
+        <button
+          className="md:hidden text-[#3a4b3c] p-2 -mr-2"
+          onClick={() => setOpen(!open)}
+          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={open}
+        >
+          <span className="text-2xl leading-none">{open ? "✕" : "☰"}</span>
         </button>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -70,28 +75,38 @@ export default function Navbar() {
           </Link>
         </nav>
 
+        {/* Backdrop mobile */}
+        {open && (
+          <div
+            className="md:hidden fixed inset-0 top-16 bg-black/20 z-40"
+            onClick={() => setOpen(false)}
+            aria-hidden="true"
+          />
+        )}
+
         {/* Menu mobile */}
         {open && (
-          <div className="md:hidden absolute top-full left-0 bg-[#3a4b3c] w-full border-t border-white/10 shadow-lg">
-            <nav className="flex flex-col p-4 gap-4 text-white">
+          <div className="md:hidden absolute top-full left-0 bg-[#3a4b3c] w-full border-t border-white/10 shadow-lg z-50">
+            <nav className="flex flex-col p-5 gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-white text-lg font-medium"
+                  className="text-white text-lg font-medium py-3 border-b border-white/10 last:border-0"
                 >
                   {link.label}
                 </Link>
               ))}
-
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="btn-secondary flex items-center justify-center"
-              >
-                Réserver
-              </Link>
+              <div className="pt-4">
+                <Link
+                  href="/contact"
+                  onClick={() => setOpen(false)}
+                  className="btn-secondary flex items-center justify-center w-full"
+                >
+                  Réserver
+                </Link>
+              </div>
             </nav>
           </div>
         )}

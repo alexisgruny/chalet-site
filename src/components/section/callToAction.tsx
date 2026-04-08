@@ -25,10 +25,10 @@ export default function CallToAction() {
                                 </a>
 
                                 <a
-                                    href="#disponibilites"
+                                    href="/tarifs"
                                     className="inline-flex items-center justify-center rounded-full border border-[#3a4b3c]/25 px-6 py-3 text-[#3a4b3c] font-medium hover:bg-[#3a4b3c]/10 transition"
                                 >
-                                    Voir les disponibilités
+                                    Voir les tarifs
                                 </a>
                             </div>
 

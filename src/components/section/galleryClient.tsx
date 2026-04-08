@@ -167,25 +167,28 @@ export default function GalleryClient() {
                             />
                         </div>
 
-                        <div className="flex items-center justify-between mt-3 text-white">
-                            <p className="text-sm opacity-90">{filtered[openIndex].alt}</p>
+                        <div className="mt-3 text-white flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <p className="text-sm opacity-90 truncate">{filtered[openIndex].alt}</p>
 
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 justify-center sm:justify-end flex-shrink-0">
                                 <button
                                     onClick={prev}
-                                    className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20"
+                                    aria-label="Photo précédente"
+                                    className="flex-1 sm:flex-none px-5 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-lg"
                                 >
                                     ←
                                 </button>
                                 <button
                                     onClick={next}
-                                    className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20"
+                                    aria-label="Photo suivante"
+                                    className="flex-1 sm:flex-none px-5 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-lg"
                                 >
                                     →
                                 </button>
                                 <button
                                     onClick={close}
-                                    className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20"
+                                    aria-label="Fermer la galerie"
+                                    className="flex-1 sm:flex-none px-5 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-sm font-medium"
                                 >
                                     Fermer
                                 </button>

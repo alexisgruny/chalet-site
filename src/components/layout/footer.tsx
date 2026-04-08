@@ -50,17 +50,17 @@ export default function Footer() {
         </h3>
         <ul className="mt-3 space-y-2 text-sm">
           <li>
-            <a href="#galerie" className="hover:text-[#3a4b3c] transition">
+            <a href="/galerie" className="hover:text-[#3a4b3c] transition">
               Galerie
             </a>
           </li>
           <li>
-            <a href="#disponibilites" className="hover:text-[#3a4b3c] transition">
-              Disponibilités
+            <a href="/tarifs" className="hover:text-[#3a4b3c] transition">
+              Tarifs
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-[#3a4b3c] transition">
+            <a href="/contact" className="hover:text-[#3a4b3c] transition">
               Nous contacter
             </a>
           </li>
