@@ -99,7 +99,7 @@ export default function LocalisationPage() {
               <div className="h-px bg-gray-100" />
 
               <div className="space-y-2 text-muted text-sm">
-                <p>L'adresse exacte est communiquée après confirmation de la réservation.</p>
+                <p>L&apos;adresse exacte est communiquée après confirmation de la réservation.</p>
                 <p>Coordonnées GPS transmises avec la confirmation de réservation.</p>
               </div>
 
@@ -198,7 +198,7 @@ export default function LocalisationPage() {
                 <h3 className="font-bold text-white">Arrivée autonome</h3>
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
-                Le chalet est équipé d'une boîte à clés sécurisée. Le code vous sera
+                Le chalet est équipé d&apos;une boîte à clés sécurisée. Le code vous sera
                 transmis par message 24 h avant votre arrivée.
               </p>
             </div>
