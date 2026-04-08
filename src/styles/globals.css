@@ -57,6 +57,15 @@ body {
   @apply text-sm text-[#3a4b3c]/70 leading-relaxed;
 }
 
+/* ── Formulaire ── */
+.label-field {
+  @apply block text-sm font-semibold text-[#3a4b3c] mb-1.5;
+}
+
+.input-field {
+  @apply w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm text-[#3a4b3c] placeholder:text-[#3a4b3c]/35 outline-none focus:border-[#3a4b3c] focus:ring-2 focus:ring-[#3a4b3c]/15 transition;
+}
+
 /* ── Boutons ── */
 .btn-primary {
   @apply inline-flex items-center justify-center rounded-full bg-[#3a4b3c] px-6 py-3 text-[#EBE2D6] font-semibold hover:opacity-90 transition;

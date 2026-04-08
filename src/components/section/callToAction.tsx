@@ -20,7 +20,7 @@ export default function CallToAction() {
 
                         <div className="lg:col-span-4">
                             <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
-                                <a href="#contact" className="btn-primary">
+                                <a href="/contact" className="btn-primary">
                                     Nous contacter
                                 </a>
 
