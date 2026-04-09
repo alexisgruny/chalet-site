@@ -13,7 +13,7 @@ return (
       <ul className="card-list">
         <li>• Ski à Gérardmer + sentiers raquettes</li>
         <li>• Ski nordique</li>
-        <li>• Station de ski La Bresse</li>
+        <li>• Station de ski </li>
       </ul>
     </div>
 
