@@ -30,7 +30,7 @@ export default function FAQ() {
       <div className="container-section">
         <h2 className="title-section-beige">Questions fréquentes</h2>
 
-        <div className="space-y-3 max-w-2xl">
+        <div className="grid gap-3 md:grid-cols-2">
           {faqs.map(({ q, a }, i) => (
             <div key={i} className="card p-0 overflow-hidden">
               <button
