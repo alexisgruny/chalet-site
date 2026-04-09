@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+    <section className="relative h-screen w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-16">
       {/* Image */}
       <Image
         src="/images/chalet/chaletHero.jpg"

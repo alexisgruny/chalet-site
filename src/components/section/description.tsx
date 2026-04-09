@@ -10,8 +10,8 @@ export default function Description() {
 
       
 
-      {/* Image */}
-      <div className="order-2 md:order-1 relative h-[300px] sm:h-[380px] md:h-[450px] w-full overflow-hidden rounded-2xl">
+      {/* Image — cachée sur mobile */}
+      <div className="hidden md:block order-2 md:order-1 relative md:h-[450px] w-full overflow-hidden rounded-2xl">
         <Image
           src="/images/chalet/chaletHero.jpg"
           alt="Chalet Jaïa"
