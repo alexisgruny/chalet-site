@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chalet Jaïa — Site vitrine
 
-## Getting Started
+Site vitrine pour la location du Chalet Jaïa à Gérardmer (Vosges). Construit avec Next.js 16, Tailwind CSS 4 et déployé sur Vercel.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Resend** — envoi des emails du formulaire de contact
+- **Lucide React** — icônes
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Accueil |
+| `/chalet` | Présentation du chalet |
+| `/galerie` | Galerie photos |
+| `/tarifs` | Tarifs par saison |
+| `/localisation` | Accès et carte |
+| `/contact` | Formulaire de contact |
+
+## Installation
+
+```bash
+npm install
+```
+
+Créer un fichier `.env.local` à la racine :
+
+```env
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxx
+CONTACT_EMAIL=email-du-proprietaire@example.com
+```
+
+Lancer le serveur de développement :
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Déploiement (Vercel)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Pusher sur GitHub
+2. Importer le projet sur [vercel.com](https://vercel.com)
+3. Ajouter les variables d'environnement dans **Settings → Environment Variables** :
+   - `RESEND_API_KEY`
+   - `CONTACT_EMAIL`
+4. Redéployer
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Mettre à jour le contenu
 
-## Learn More
+### Textes
+Chaque page est dans `src/app/[page]/page.tsx`. Les données (tarifs, distances, FAQ…) sont définies en haut de chaque fichier sous forme de tableaux — facile à modifier sans toucher au HTML.
 
-To learn more about Next.js, take a look at the following resources:
+### Photos
+Remplacer les images dans `public/images/chalet/`. Idéalement en **WebP**, compressées à moins de 200 KB par image.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Domaine
+Quand le domaine est finalisé, mettre à jour :
+- `metadataBase` dans `src/app/layout.tsx`
+- `BASE_URL` dans `src/app/sitemap.ts`
+- L'URL dans `src/app/robots.ts`
+- Le champ `from` dans `src/app/api/contact/route.ts` (après vérification du domaine sur Resend)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Structure
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/                  # Pages et API routes
+│   ├── api/contact/      # Endpoint formulaire de contact
+│   ├── chalet/
+│   ├── contact/
+│   ├── galerie/
+│   ├── localisation/
+│   ├── tarifs/
+│   ├── layout.tsx        # Layout global + métadonnées
+│   ├── loading.tsx       # Page de chargement
+│   ├── not-found.tsx     # Page 404
+│   └── error.tsx         # Page d'erreur
+├── components/
+│   ├── layout/           # Navbar, Footer
+│   └── section/          # Composants de sections
+├── lib/
+│   └── routes.ts         # Liens de navigation
+└── styles/
+    └── globals.css       # Classes utilitaires Tailwind
+```
