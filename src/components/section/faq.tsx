@@ -1,35 +1,59 @@
-export default function Services() {
+"use client";
+
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+
+const faqs = [
+  {
+    q: "À quelle distance est le lac de Gérardmer&nbsp;?",
+    a: "Le chalet se situe à environ 7 km du lac de Gérardmer, soit 10 minutes en voiture.",
+  },
+  {
+    q: "Le linge est-il fourni&nbsp;?",
+    a: "Oui : les lits sont faits à votre arrivée et les serviettes sont fournies.",
+  },
+  {
+    q: "L'arrivée est-elle autonome&nbsp;?",
+    a: "Oui, grâce à une boîte à clés sécurisée. Le code vous est transmis 24 h avant votre arrivée.",
+  },
+  {
+    q: "Peut-on recharger une voiture électrique&nbsp;?",
+    a: "Oui, le chalet dispose d'une borne de recharge incluse dans le tarif.",
+  },
+];
+
+export default function FAQ() {
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
-
     <section className="section-beige">
-      <div className="container-section space-y-6">
-        <h2 className="title-section-beige">
-          Questions fréquentes
-        </h2>
+      <div className="container-section">
+        <h2 className="title-section-beige">Questions fréquentes</h2>
 
-        <div className="grid gap-4 md:grid-cols-2">
-          {[
-            {
-              q: "À quelle distance est le lac de Gérardmer ?",
-              a: "Le chalet se situe à environ 7 km du lac de Gérardmer.",
-            },
-            {
-              q: "Le linge est-il fourni ?",
-              a: "Oui : lits faits à l’arrivée et serviettes fournies.",
-            },
-            {
-              q: "L’arrivée est-elle autonome ?",
-              a: "Oui, grâce à une boîte à clés (arrivée autonome).",
-            },
-            {
-              q: "Peut-on recharger une voiture électrique ?",
-              a: "Oui, le chalet dispose d’une borne de recharge.",
-            },
-          ].map(({ q, a }) => (
-            <div key={q} className="card">
-              <h3 className="font-bold text-[#3a4b3c]">{q}</h3>
-              <p className="text-muted mt-2">{a}</p>
+        <div className="space-y-3 max-w-2xl">
+          {faqs.map(({ q, a }, i) => (
+            <div key={i} className="card p-0 overflow-hidden">
+              <button
+                onClick={() => setOpen(open === i ? null : i)}
+                className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
+                aria-expanded={open === i}
+              >
+                <span
+                  className="font-semibold text-[#3a4b3c] text-sm sm:text-base"
+                  dangerouslySetInnerHTML={{ __html: q }}
+                />
+                <ChevronDown
+                  className={`h-5 w-5 text-[#3a4b3c]/50 flex-shrink-0 transition-transform duration-200 ${
+                    open === i ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {open === i && (
+                <div className="px-5 pb-4 text-muted text-sm leading-relaxed border-t border-gray-100 pt-3">
+                  {a}
+                </div>
+              )}
             </div>
           ))}
         </div>

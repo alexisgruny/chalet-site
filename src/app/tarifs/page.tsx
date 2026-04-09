@@ -129,11 +129,11 @@ export default function TarifsPage() {
                 <div className="space-y-2 pt-2 border-t border-gray-100">
                   <div className="flex items-baseline justify-between">
                     <span className="text-muted text-sm">Semaine</span>
-                    <span className="text-2xl font-bold text-[#3a4b3c]">{week}</span>
+                    <span className="text-lg font-bold text-[#3a4b3c]">{week}</span>
                   </div>
                   <div className="flex items-baseline justify-between">
                     <span className="text-muted text-sm">Week-end</span>
-                    <span className="text-xl font-semibold text-[#3a4b3c]">{weekend}</span>
+                    <span className="text-base font-semibold text-[#3a4b3c]">{weekend}</span>
                   </div>
                 </div>
 

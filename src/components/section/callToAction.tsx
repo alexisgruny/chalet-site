@@ -10,7 +10,7 @@ export default function CallToAction() {
                     <div className="relative grid gap-8 lg:grid-cols-12 lg:items-center">
                         <div className="lg:col-span-8">
                             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-[#3a4b3c]">
-                                Et si le Chalet Jaïa devenait votre refuge à Gérardmer ?
+                                Et si le Chalet Jaïa devenait votre refuge à Gérardmer&nbsp;?
                             </h2>
                             <p className="mt-3 text-base sm:text-lg leading-relaxed text-[#3a4b3c]/80 max-w-2xl">
                                 Un lieu calme, chaleureux et pensé pour se retrouver en famille ou entre amis.

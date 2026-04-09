@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, Clock, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, Phone, Clock, Send, CheckCircle, AlertCircle, ChevronDown } from "lucide-react";
 import CallToAction from "@/components/section/callToAction";
 
 // ── Infos propriétaires — à personnaliser ──────────────────────────────────
@@ -96,7 +96,7 @@ export default function ContactPage() {
             Contactez-nous
           </h1>
           <p className="mt-3 text-white/80 text-lg max-w-xl mx-auto">
-            Une question, une demande de réservation ? Écrivez-nous,
+            Une question, une demande de réservation&nbsp;? Écrivez-nous,
             nous vous répondons personnellement.
           </p>
         </div>
@@ -253,20 +253,23 @@ export default function ContactPage() {
                     <label htmlFor="guests" className="label-field">
                       Nombre de voyageurs <span className="text-[#3a4b3c]/40 font-normal">(facultatif)</span>
                     </label>
-                    <select
-                      id="guests"
-                      name="guests"
-                      value={form.guests}
-                      onChange={handleChange}
-                      className="input-field"
-                    >
-                      <option value="">Sélectionner</option>
-                      {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-                        <option key={n} value={n}>
-                          {n} {n === 1 ? "personne" : "personnes"}
-                        </option>
-                      ))}
-                    </select>
+                    <div className="relative">
+                      <select
+                        id="guests"
+                        name="guests"
+                        value={form.guests}
+                        onChange={handleChange}
+                        className="input-field appearance-none pr-10"
+                      >
+                        <option value="">Sélectionner</option>
+                        {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+                          <option key={n} value={n}>
+                            {n} {n === 1 ? "personne" : "personnes"}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#3a4b3c]/40" />
+                    </div>
                   </div>
 
                   {/* Message */}

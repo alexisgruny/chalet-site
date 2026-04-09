@@ -53,13 +53,11 @@ return (
                 ))}
               </div>
 
-              <div className="flex gap-3 mt-6">
-
-                {/* CTA */}
-                <Link href="/contact" className="btn-primary">
+              <div className="flex flex-col sm:flex-row gap-3 mt-6">
+                <Link href="/contact" className="btn-primary text-sm text-center">
                   Demander une réservation
                 </Link>
-                <Link href="/galerie" className="btn-secondary">
+                <Link href="/galerie" className="btn-secondary text-sm text-center">
                   Voir les photos
                 </Link>
               </div>

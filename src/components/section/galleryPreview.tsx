@@ -13,7 +13,7 @@ export default function GalleryPreview() {
                     ].map((src, i) => (
                         <div
                             key={i}
-                            className="aspect-square overflow-hidden rounded-xl group"
+                            className={`aspect-square overflow-hidden rounded-xl group ${i >= 2 ? "hidden md:block" : ""}`}
                         >
                             <Image
                                 src={src}
