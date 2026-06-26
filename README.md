@@ -70,7 +70,7 @@ src/
 ├── app/                  # Pages et API routes
 │   ├── api/contact/      # Endpoint formulaire de contact
 │   ├── chalet/
-│   ├── contact/<img width="1903" height="933" alt="DemoChaletJaia" src="https://github.com/user-attachments/assets/9f7d5797-8556-4d67-9974-6ea83a9e776c" />
+│   ├── contact/
 
 │   ├── galerie/
 │   ├── localisation/
