@@ -91,7 +91,7 @@ src/
 
 ## Demo
 
-[Voir le site en live] (https://chalet-jaia-preview.vercel.app/)
+[Voir le site en live](https://chalet-jaia-preview.vercel.app/)
 
 <img width="1903" height="933" alt="DemoChaletJaia" src="https://github.com/user-attachments/assets/a1694840-c8b8-4468-ace5-f636885a37c2" />
 <img width="1900" height="950" alt="DemoChaletJaia2" src="https://github.com/user-attachments/assets/57958b77-d620-4e3c-bbb3-b4721812af72" />
