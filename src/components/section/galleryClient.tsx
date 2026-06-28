@@ -39,21 +39,21 @@ export default function GalleryClient() {
         setOpenIndex((i) => (i === null ? null : (i + 1) % filtered.length));
 
     return (
-        <section className="w-full">
-            {/* Tabs (centré) */}
-            <div className="bg-[#3a4b3c] w-full">
-        <div className="container-section py-12 space-y-6">
-          
+        <>
+            {/* Hero */}
+            <section className="section-green pt-20">
+        <div className="container-section space-y-6">
+
           <div className="space-y-3">
-            <h1 className="text-3xl md:text-4xl font-bold text-white">
+            <h1 className="text-3xl md:text-5xl font-bold text-white">
               Galerie
             </h1>
-            <p className="text-white max-w-2xl">
+            <p className="text-white/80 text-lg max-w-2xl">
               Découvrez le Chalet Jaïa : intérieur, extérieur, espaces nuit et équipements.
             </p>
           </div>
 
-          {/* Categories */}
+          {/* Filtres */}
           <div className="flex flex-wrap gap-2">
             {categories.map((c) => (
               <button
@@ -71,7 +71,7 @@ export default function GalleryClient() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
             {/* Grille premium full width */}
             <div className="w-full px-4 sm:px-6 lg:px-12 pb-14 mt-8 md:mt-12">
@@ -198,6 +198,6 @@ export default function GalleryClient() {
                     </div>
                 </div>
             )}
-        </section>
+        </>
     );
 }

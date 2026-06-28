@@ -6,9 +6,5 @@ export const metadata = {
 };
 
 export default function GaleriePage() {
-  return (
-    <main className="min-h-screen pt-16">
-      <GalleryClient />
-    </main>
-  );
+  return <GalleryClient />;
 }
