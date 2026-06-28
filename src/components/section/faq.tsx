@@ -37,6 +37,7 @@ export default function FAQ() {
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
                 aria-expanded={open === i}
+                aria-controls={`faq-answer-${i}`}
               >
                 <span
                   className="font-semibold text-[#3a4b3c] text-sm sm:text-base"
@@ -49,11 +50,12 @@ export default function FAQ() {
                 />
               </button>
 
-              {open === i && (
-                <div className="px-5 pb-4 text-muted text-sm leading-relaxed border-t border-gray-100 pt-3">
-                  {a}
-                </div>
-              )}
+              <div
+                id={`faq-answer-${i}`}
+                className={`px-5 pb-4 text-muted text-sm leading-relaxed border-t border-gray-100 pt-3${open === i ? "" : " hidden"}`}
+              >
+                {a}
+              </div>
             </div>
           ))}
         </div>

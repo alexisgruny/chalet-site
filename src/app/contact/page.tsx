@@ -49,16 +49,34 @@ const INITIAL: FormData = {
   message: "",
 };
 
+type FieldErrors = Partial<Record<"name" | "email" | "message", string>>;
+
 // ── Page ───────────────────────────────────────────────────────────────────
 export default function ContactPage() {
   const [form, setForm] = useState<FormData>(INITIAL);
   const [status, setStatus] = useState<Status>("idle");
   const [feedback, setFeedback] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    if (name === "name" || name === "email" || name === "message") {
+      setFieldErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
+  }
+
+  function handleBlur(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    const { name, value } = e.target;
+    let error: string | undefined;
+    if (name === "name" && !value.trim()) error = "Le nom est requis.";
+    else if (name === "email") {
+      if (!value.trim()) error = "L'email est requis.";
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) error = "Email invalide.";
+    } else if (name === "message" && !value.trim()) error = "Le message est requis.";
+    setFieldErrors((prev) => ({ ...prev, [name]: error }));
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -179,9 +197,13 @@ export default function ContactPage() {
                         autoComplete="name"
                         value={form.name}
                         onChange={handleChange}
+                        onBlur={handleBlur}
                         placeholder="Jean Dupont"
                         className="input-field"
                       />
+                      {fieldErrors.name && (
+                        <p className="mt-1 text-xs text-red-500">{fieldErrors.name}</p>
+                      )}
                     </div>
                     <div>
                       <label htmlFor="email" className="label-field">
@@ -195,9 +217,13 @@ export default function ContactPage() {
                         autoComplete="email"
                         value={form.email}
                         onChange={handleChange}
+                        onBlur={handleBlur}
                         placeholder="jean@example.com"
                         className="input-field"
                       />
+                      {fieldErrors.email && (
+                        <p className="mt-1 text-xs text-red-500">{fieldErrors.email}</p>
+                      )}
                     </div>
                   </div>
 
@@ -284,9 +310,13 @@ export default function ContactPage() {
                       rows={5}
                       value={form.message}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       placeholder="Votre demande, question sur le chalet…"
                       className="input-field resize-none"
                     />
+                    {fieldErrors.message && (
+                      <p className="mt-1 text-xs text-red-500">{fieldErrors.message}</p>
+                    )}
                   </div>
 
                   <button

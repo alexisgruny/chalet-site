@@ -40,6 +40,30 @@ export const metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Chalet Jaïa",
+  "description": "Chalet chaleureux à Gérardmer pour 6 personnes, 83 m², poêle à pellets, wifi, borne électrique.",
+  "url": "https://chalet-jaia.fr",
+  "image": "https://chalet-jaia.fr/images/chalet/chaletHero.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gérardmer",
+    "addressRegion": "Vosges",
+    "postalCode": "88400",
+    "addressCountry": "FR",
+  },
+  "telephone": "+33600000000",
+  "email": "contact@chalet-jaia.fr",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Borne de recharge électrique", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Poêle à pellets", "value": true },
+  ],
+  "occupancy": { "@type": "QuantitativeValue", "maxValue": 6 },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -47,6 +71,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         <Navbar />
         <main className="min-h-screen pt-16">

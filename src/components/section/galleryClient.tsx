@@ -150,6 +150,7 @@ export default function GalleryClient() {
                     className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
                     role="dialog"
                     aria-modal="true"
+                    aria-label="Galerie agrandie"
                     onClick={close}
                 >
                     <div

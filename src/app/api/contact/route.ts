@@ -37,7 +37,7 @@ interface ContactPayload {
 function validate(data: ContactPayload): string | null {
   if (!data.name?.trim())    return "Le nom est requis.";
   if (!data.email?.trim())   return "L'email est requis.";
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return "Email invalide.";
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email)) return "Email invalide.";
   if (!data.message?.trim()) return "Le message est requis.";
 
   // Limites de longueur pour éviter les abus
@@ -66,15 +66,31 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: false, message: error }, { status: 400 });
   }
 
+  const apiKey = process.env.RESEND_API_KEY;
+  const contactEmail = process.env.CONTACT_EMAIL;
+  if (!apiKey || !contactEmail) {
+    console.error("Missing env: RESEND_API_KEY or CONTACT_EMAIL");
+    return NextResponse.json(
+      { success: false, message: "Erreur de configuration serveur." },
+      { status: 500 }
+    );
+  }
+
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const resend = new Resend(apiKey);
     await resend.emails.send({
-      from: "Chalet Jaïa <onboarding@resend.dev>", // ← remplacer par noreply@tondomaine.fr une fois le domaine vérifié
-      to: process.env.CONTACT_EMAIL!,
+      from: "Chalet Jaïa <onboarding@resend.dev>",
+      to: contactEmail,
       replyTo: body.email,
       subject: `Nouvelle demande de ${body.name}`,
       text: buildEmailText(body),
     });
+    resend.emails.send({
+      from: "Chalet Jaïa <onboarding@resend.dev>",
+      to: body.email,
+      subject: "Nous avons bien reçu votre message — Chalet Jaïa",
+      text: buildConfirmationText(body.name),
+    }).catch((err) => console.error("Erreur email confirmation :", err));
   } catch (err) {
     console.error("Erreur envoi email :", err);
     return NextResponse.json(
@@ -100,4 +116,16 @@ function buildEmailText(data: ContactPayload): string {
   ]
     .filter(Boolean)
     .join("\n");
+}
+
+function buildConfirmationText(name: string): string {
+  return [
+    `Bonjour ${name},`,
+    "",
+    "Nous avons bien reçu votre message et vous répondrons dans les 24 heures.",
+    "",
+    "À très bientôt,",
+    "L'équipe Chalet Jaïa",
+    "contact@chalet-jaia.fr",
+  ].join("\n");
 }

@@ -1,4 +1,4 @@
-export default function Couchage() {
+export default function Activity() {
 return (
 
 <section className="section-green">

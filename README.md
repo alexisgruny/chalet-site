@@ -87,3 +87,9 @@ src/
 └── styles/
     └── globals.css       # Classes utilitaires Tailwind
 ```
+
+## Demo
+
+[Voir le site en live] (https://chalet-jaia-preview.vercel.app/)
+
+

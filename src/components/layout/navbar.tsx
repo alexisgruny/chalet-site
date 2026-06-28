@@ -57,7 +57,7 @@ export default function Navbar() {
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={open}
         >
-          <span className="text-2xl leading-none">{open ? "✕" : "☰"}</span>
+          <span className="text-2xl leading-none" aria-hidden="true">{open ? "✕" : "☰"}</span>
         </button>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
