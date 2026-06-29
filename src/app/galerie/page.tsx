@@ -1,4 +1,5 @@
 import GalleryClient from "@/components/section/galleryClient";
+import CallToAction from "@/components/section/callToAction";
 
 export const metadata = {
   title: "Galerie — Chalet Jaïa",
@@ -6,5 +7,10 @@ export const metadata = {
 };
 
 export default function GaleriePage() {
-  return <GalleryClient />;
+  return (
+    <>
+      <GalleryClient />
+      <CallToAction />
+    </>
+  );
 }

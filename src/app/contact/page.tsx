@@ -342,6 +342,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <CallToAction hideContact />
     </>
   );
 }

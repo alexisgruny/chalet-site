@@ -189,7 +189,7 @@ export default function TarifsPage() {
       </section>
 
       {/* ── CTA ── */}
-      <CallToAction />
+      <CallToAction hideTarifs />
     </>
   );
 }

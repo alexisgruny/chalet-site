@@ -1,4 +1,4 @@
-export default function CallToAction() {
+export default function CallToAction({ hideContact = false, hideTarifs = false }: { hideContact?: boolean; hideTarifs?: boolean }) {
     return (
 
         <section className="section-green">
@@ -20,16 +20,20 @@ export default function CallToAction() {
 
                         <div className="lg:col-span-4">
                             <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
-                                <a href="/contact" className="btn-primary">
-                                    Nous contacter
-                                </a>
+                                {!hideContact && (
+                                    <a href="/contact" className="btn-primary">
+                                        Nous contacter
+                                    </a>
+                                )}
 
-                                <a
-                                    href="/tarifs"
-                                    className="inline-flex items-center justify-center rounded-full border border-[#3a4b3c]/25 px-6 py-3 text-[#3a4b3c] font-medium hover:bg-[#3a4b3c]/10 transition"
-                                >
-                                    Voir les tarifs
-                                </a>
+                                {!hideTarifs && (
+                                    <a
+                                        href="/tarifs"
+                                        className="inline-flex items-center justify-center rounded-full border border-[#3a4b3c]/25 px-6 py-3 text-[#3a4b3c] font-medium hover:bg-[#3a4b3c]/10 transition"
+                                    >
+                                        Voir les tarifs
+                                    </a>
+                                )}
                             </div>
 
                             <p className="mt-3 text-xs text-[#3a4b3c]/60">
