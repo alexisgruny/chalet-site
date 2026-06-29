@@ -5,7 +5,7 @@ export default function HeroChalet() {
 return (
 
 <section className="w-full relative">
-        <div className="relative h-[45vh] min-h-[360px] w-full">
+        <div className="relative h-[65vh] min-h-[560px] w-full">
 
           {/* Image */}
           <Image
