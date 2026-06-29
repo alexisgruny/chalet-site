@@ -89,7 +89,7 @@ export default function GalleryClient() {
         <>
             {/* Hero */}
             <section className="w-full relative">
-                <div className="relative h-[45vh] min-h-[360px] w-full">
+                <div className="relative h-[40vh] min-h-[320px] w-full">
                     <Image
                         src="/images/chalet/chaletHero.jpg"
                         alt="Galerie — Chalet Jaïa"

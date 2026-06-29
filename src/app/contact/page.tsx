@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { Mail, Phone, Clock, Send, CheckCircle, AlertCircle, ChevronDown } from "lucide-react";
 import CallToAction from "@/components/section/callToAction";
@@ -108,15 +109,28 @@ export default function ContactPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="section-green pt-20">
-        <div className="container-section text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-white">
-            Contactez-nous
-          </h1>
-          <p className="mt-3 text-white/80 text-lg max-w-xl mx-auto">
-            Une question, une demande de réservation&nbsp;? Écrivez-nous,
-            nous vous répondrons personnellement.
-          </p>
+      <section className="w-full relative">
+        <div className="relative h-[40vh] min-h-[320px] w-full">
+          <Image
+            src="/images/chalet/chaletHero.jpg"
+            alt="Contactez le Chalet Jaïa"
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 flex items-end">
+            <div className="container-section pb-10">
+              <h1 className="text-3xl md:text-5xl font-bold text-white">
+                Contactez-nous
+              </h1>
+              <p className="mt-2 text-white/85 text-lg max-w-xl">
+                Une question, une demande de réservation&nbsp;? Écrivez-nous,
+                nous vous répondrons personnellement.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
