@@ -148,6 +148,7 @@ export default function LocalisationPage() {
                     {distance}
                   </span>
                   <span className="flex items-center gap-1">
+                    <Car className="h-3 w-3" />
                     <Clock className="h-3 w-3" />
                     {duree}
                   </span>
