@@ -12,11 +12,58 @@ type Photo = {
 };
 
 const photos: Photo[] = [
-    { src: "/images/chalet/chaletHero.jpg", alt: "Vue extérieure du chalet", category: "Extérieur" },
-    { src: "/images/chalet/chalet1.jpg", alt: "Salon du chalet", category: "Salon" },
-    { src: "/images/chalet/chalet2.jpg", alt: "Cuisine équipée", category: "Cuisine" },
-    { src: "/images/chalet/chalet3.jpg", alt: "Chambre du chalet", category: "Chambres" },
-    // Ajoute tes photos ici (idéalement 12–24)
+    // Extérieur
+    { src: "/images/chalet/exterieur-facade-soleil.jpg", alt: "Façade principale du Chalet Jaïa sous le soleil", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-facade-logo-printemps.jpg", alt: "Façade avec logo Chalet Jaïa au printemps", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-facade-hiver-sapin.jpg", alt: "Façade du chalet en hiver avec sapin et ciel bleu", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-facade-logo-hiver.jpg", alt: "Façade hiver avec logo Chalet Jaïa enneigé", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-facade-cote-jardin.jpg", alt: "Côté du chalet avec jardin et terrasse", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-facade-hiver-logo.jpg", alt: "Façade hiver, logo et vue sur les sapins", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-facade-hiver-cote.jpg", alt: "Façade côté droit du chalet en hiver", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-facade-jardin-hiver.jpg", alt: "Façade et jardin enneigé sous le soleil", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-facade-arriere-jardin.jpg", alt: "Arrière du chalet, jardin en pente et sapins", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-facade-soir-hortensias.jpg", alt: "Façade du chalet en soirée avec hortensias", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-facade-printemps.jpg", alt: "Chalet Jaïa vu de côté au printemps avec vue Vosges", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-parking-hiver.jpg", alt: "Parking couvert et paysage enneigé", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-parking-vue-panoramique.jpg", alt: "Parking gravier et vue panoramique sur les montagnes", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-allee-carport.jpg", alt: "Allée d'accès et carport bois en automne", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-angle-vue-vosges.jpg", alt: "Angle du chalet avec vue dégagée sur les Vosges", category: "Extérieur" },
+    { src: "/images/chalet/exterieur-entree-carport-cle.jpg", alt: "Entrée couverte et boîtier de clés sécurisé", category: "Extérieur" },
+    // Salon
+    { src: "/images/chalet/salon-vue-panoramique.jpg", alt: "Salon avec grande fenêtre panoramique sur les Vosges", category: "Salon" },
+    { src: "/images/chalet/salon-poele-vue-vosges.jpg", alt: "Poêle à bois et fenêtres vue sur les Vosges", category: "Salon" },
+    { src: "/images/chalet/salon-canape-tourne-disque.jpg", alt: "Canapé et tourne-disque vintage dans le salon", category: "Salon" },
+    { src: "/images/chalet/salon-vue-ensemble-mezzanine.jpg", alt: "Vue d'ensemble du salon avec mezzanine et table à manger", category: "Salon" },
+    { src: "/images/chalet/salon-canape-mezzanine.jpg", alt: "Canapé, table basse et mezzanine", category: "Salon" },
+    { src: "/images/chalet/salon-canape-vue-vosges.jpg", alt: "Canapé avec vue sur les Vosges par la porte vitrée", category: "Salon" },
+    { src: "/images/chalet/salon-fenetre-panoramique-vosges.jpg", alt: "Vue panoramique intérieure sur les Vosges", category: "Salon" },
+    { src: "/images/chalet/salon-tv-meuble.jpg", alt: "Télévision murale et meuble TV en bois", category: "Salon" },
+    { src: "/images/chalet/salon-tourne-disque-detail.jpg", alt: "Détail du tourne-disque vintage sous l'escalier", category: "Salon" },
+    { src: "/images/chalet/salon-canape-escalier-vue.jpg", alt: "Salon avec escalier et vue extérieure en hiver", category: "Salon" },
+    { src: "/images/chalet/salon-canape-tables-basses.jpg", alt: "Canapé et tables basses bois dans le salon", category: "Salon" },
+    { src: "/images/chalet/salon-vue-salle-a-manger.jpg", alt: "Vue d'ensemble salon et salle à manger avec poêle", category: "Salon" },
+    { src: "/images/chalet/salon-poele-fenetres-hiver.jpg", alt: "Poêle à bois et grandes fenêtres en hiver", category: "Salon" },
+    { src: "/images/chalet/salon-poele-fenetres-detail.jpg", alt: "Détail poêle et fenêtres panoramiques", category: "Salon" },
+    { src: "/images/chalet/salon-table-poele-nature.jpg", alt: "Table, canapé, poêle et porte sur la nature", category: "Salon" },
+    { src: "/images/chalet/salon-fauteuil-mezzanine.jpg", alt: "Fauteuil bouclette et tabouret sur la mezzanine", category: "Salon" },
+    // Chambres
+    { src: "/images/chalet/chambre-principale-vue-complete.jpg", alt: "Vue complète de la chambre principale", category: "Chambres" },
+    { src: "/images/chalet/chambre-principale-lit-mansarde.jpg", alt: "Lit double sous toit mansardé en bois", category: "Chambres" },
+    { src: "/images/chalet/chambre-principale-vue-large.jpg", alt: "Chambre principale — vue large avec déco chaleureuse", category: "Chambres" },
+    { src: "/images/chalet/chambre-principale-lit-tete-bois.jpg", alt: "Lit double avec tête de lit en lattes de bois", category: "Chambres" },
+    { src: "/images/chalet/chambre-principale-detail-lampe.jpg", alt: "Détail du lit double avec lampe de chevet", category: "Chambres" },
+    { src: "/images/chalet/chambre-coin-montagne-lits.jpg", alt: "Deux lits simples sous toit mansardé — coin montagne", category: "Chambres" },
+    { src: "/images/chalet/chambre-enfant-bureau-velo.jpg", alt: "Chambre enfant avec bureau et déco vélo", category: "Chambres" },
+    { src: "/images/chalet/chambre-enfant-lit-simple.jpg", alt: "Lit simple avec coussins colorés et bureau", category: "Chambres" },
+    // Cuisine
+    { src: "/images/chalet/cuisine-vue-ensemble.jpg", alt: "Cuisine noire équipée avec table en bois et four", category: "Cuisine" },
+    { src: "/images/chalet/cuisine-table-four.jpg", alt: "Table en bois bord naturel et cuisine noire avec four", category: "Cuisine" },
+    // Services
+    { src: "/images/chalet/salle-de-bain-douche.jpg", alt: "Salle de bain avec douche italienne et lavabo", category: "Services" },
+    { src: "/images/chalet/salle-de-bain-serviettes.jpg", alt: "Salle de bain avec porte-serviettes et carrelage béton", category: "Services" },
+    { src: "/images/chalet/services-buanderie-machine.jpg", alt: "Buanderie avec lave-linge et sèche-linge", category: "Services" },
+    { src: "/images/chalet/services-dressing-chambre.jpg", alt: "Dressing ouvert avec miroir et étagères", category: "Services" },
+    { src: "/images/chalet/services-bibliotheque-jeux.jpg", alt: "Bibliothèque et jeux de société sous la mezzanine", category: "Services" },
 ];
 
 const categories: Category[] = ["Tout", "Extérieur", "Salon", "Chambres", "Cuisine", "Services"];

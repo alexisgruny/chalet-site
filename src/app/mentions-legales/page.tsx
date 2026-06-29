@@ -20,7 +20,7 @@ export default function MentionsLegalesPage() {
           <div className="card">
             <h2 className="font-semibold text-[#3a4b3c] text-lg mb-3">Éditeur du site</h2>
             <div className="space-y-1 text-sm text-muted">
-              <p><strong>Responsable de la publication :</strong> [Prénom Nom du propriétaire]</p>
+              <p><strong>Responsable de la publication :</strong> [Isabelle Gruny]</p>
               <p><strong>Email :</strong>{" "}
                 <a href="mailto:contact@chalet-jaia.fr" className="underline hover:text-[#3a4b3c]">
                   contact@chalet-jaia.fr
