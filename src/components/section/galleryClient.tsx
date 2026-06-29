@@ -41,37 +41,46 @@ export default function GalleryClient() {
     return (
         <>
             {/* Hero */}
-            <section className="section-green pt-20">
-        <div className="container-section space-y-6">
-
-          <div className="space-y-3">
-            <h1 className="text-3xl md:text-5xl font-bold text-white">
-              Galerie
-            </h1>
-            <p className="text-white/80 text-lg max-w-2xl">
-              Découvrez le Chalet Jaïa : intérieur, extérieur, espaces nuit et équipements.
-            </p>
-          </div>
-
-          {/* Filtres */}
-          <div className="flex flex-wrap gap-2">
-            {categories.map((c) => (
-              <button
-                key={c}
-                onClick={() => setActive(c)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition
-                  ${
-                    active === c
-                      ? "bg-white text-[#3a4b3c]"
-                      : "bg-white/20 text-white hover:bg-white/30"
-                  }`}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+            <section className="w-full relative">
+                <div className="relative h-[45vh] min-h-[360px] w-full">
+                    <Image
+                        src="/images/chalet/chaletHero.jpg"
+                        alt="Galerie — Chalet Jaïa"
+                        fill
+                        priority
+                        className="object-cover"
+                        sizes="100vw"
+                    />
+                    <div className="absolute inset-0 bg-black/50" />
+                    <div className="absolute inset-0 flex items-end">
+                        <div className="container-section pb-8 space-y-4">
+                            <div className="space-y-2">
+                                <h1 className="text-3xl md:text-5xl font-bold text-white">
+                                    Galerie
+                                </h1>
+                                <p className="text-white/85 text-lg">
+                                    Découvrez le Chalet Jaïa : intérieur, extérieur, espaces nuit et équipements.
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                {categories.map((c) => (
+                                    <button
+                                        key={c}
+                                        onClick={() => setActive(c)}
+                                        className={`px-4 py-2 rounded-full text-sm font-semibold transition
+                                            ${active === c
+                                                ? "bg-white text-[#3a4b3c]"
+                                                : "bg-white/20 text-white hover:bg-white/30"
+                                            }`}
+                                    >
+                                        {c}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Grille premium full width */}
             <div className="w-full px-4 sm:px-6 lg:px-12 pb-14 mt-8 md:mt-12">

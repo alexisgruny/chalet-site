@@ -26,7 +26,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="section-beige">
+    <section className="bg-[#EBE2D6] text-[#3a4b3c] pt-8 pb-16">
       <div className="container-section">
         <h2 className="title-section-beige">Questions fréquentes</h2>
 
@@ -35,7 +35,7 @@ export default function FAQ() {
             <div key={i} className="card p-0 overflow-hidden">
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
+                className="w-full flex items-center justify-between gap-4 px-4 py-3 text-left"
                 aria-expanded={open === i}
                 aria-controls={`faq-answer-${i}`}
               >
@@ -52,7 +52,7 @@ export default function FAQ() {
 
               <div
                 id={`faq-answer-${i}`}
-                className={`px-5 pb-4 text-muted text-sm leading-relaxed border-t border-gray-100 pt-3${open === i ? "" : " hidden"}`}
+                className={`px-4 pb-3 text-muted text-sm leading-relaxed border-t border-gray-100 pt-2${open === i ? "" : " hidden"}`}
               >
                 {a}
               </div>

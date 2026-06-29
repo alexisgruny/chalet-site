@@ -24,7 +24,7 @@ const seasons = [
     highlight: true,
   },
   {
-    label: "Haute saison",
+    label: "Haute saison (été et vacances scolaires)",
     period: "Juil. – août · Déc. – vacances",
     week: "1 100 €",
     weekend: "550 €",

@@ -32,7 +32,7 @@ export default function Equipements() {
           />
           <EquipCard
             title="Multimédia"
-            items={["Grand écran TV", "TV dans 1 chambre", "TV coin montagne"]}
+            items={["Grand écran TV salon", "TV dans 1 chambre", "TV coin montagne"]}
           />
           <EquipCard
             title="Pratique"

@@ -115,7 +115,7 @@ export default function ContactPage() {
           </h1>
           <p className="mt-3 text-white/80 text-lg max-w-xl mx-auto">
             Une question, une demande de réservation&nbsp;? Écrivez-nous,
-            nous vous répondons personnellement.
+            nous vous répondrons personnellement.
           </p>
         </div>
       </section>
@@ -126,7 +126,7 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-3">
 
             {/* Infos de contact */}
-            <div className="space-y-6">
+            <div className="space-y-6 order-2 lg:order-1">
               <h2 className="title-section-beige !mb-4">Nos coordonnées</h2>
 
               {INFOS.map(({ icon: Icon, label, value, href }) => (
@@ -162,7 +162,7 @@ export default function ContactPage() {
             </div>
 
             {/* Formulaire */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 order-1 lg:order-2">
               <div className="card">
 
                 {/* Feedback succès */}
@@ -342,8 +342,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      <CallToAction />
     </>
   );
 }
