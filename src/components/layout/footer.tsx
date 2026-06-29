@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="section-beige">
-  <div className="container-section pt-12 pb-6">
+    <footer className="bg-[#EBE2D6] text-[#3a4b3c] pt-16 pb-4">
+  <div className="container-section pt-12 pb-2">
     
     <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
       
