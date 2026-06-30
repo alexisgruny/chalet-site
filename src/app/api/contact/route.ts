@@ -126,6 +126,6 @@ function buildConfirmationText(name: string): string {
     "",
     "À très bientôt,",
     "L'équipe Chalet Jaïa",
-    "contact@chalet-jaia.fr",
+    "chaletjaia@gmail.com",
   ].join("\n");
 }

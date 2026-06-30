@@ -33,14 +33,13 @@ return (
 
               <p className="text-white/85 mt-3 max-w-2xl">
                 Chalet tout confort dans les Vosges, à 7 km du lac de Gérardmer : poêle à pellets,
-                climatisation, wifi, borne de recharge, arrivée autonome et linge inclus.
+                climatisation, wifi, arrivée autonome et linge inclus.
               </p>
 
               <div className="flex flex-wrap gap-2 mt-4">
                 {[
                   "Poêle à pellets",
                   "Climatisation",
-                  "Borne électrique",
                   "Arrivée autonome",
                   "Lits faits + serviettes",
                 ].map((t) => (
