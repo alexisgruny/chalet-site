@@ -106,7 +106,7 @@ export default function ContactPage() {
       <section className="w-full relative">
         <div className="relative h-[40vh] min-h-[320px] w-full">
           <Image
-            src="/images/chalet/chaletHero.jpg"
+            src="/images/chalet/exterieur-facade-soleil.jpg"
             alt="Contactez le Chalet Jaïa"
             fill
             priority

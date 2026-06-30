@@ -13,7 +13,7 @@ export default function Description() {
       {/* Image — cachée sur mobile */}
       <div className="hidden md:block order-2 md:order-1 relative md:h-[450px] w-full overflow-hidden rounded-2xl">
         <Image
-          src="/images/chalet/chaletHero.jpg"
+          src="/images/chalet/salon-vue-panoramique.jpg"
           alt="Chalet Jaïa"
           fill
           className="object-cover"

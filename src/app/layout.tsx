@@ -23,7 +23,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/images/chalet/chaletHero.jpg", // ← idéalement une image 1200×630
+        url: "/images/chalet/exterieur-facade-soleil.jpg", // ← idéalement une image 1200×630
         width: 1200,
         height: 630,
         alt: "Chalet Jaïa à Gérardmer",
@@ -36,7 +36,7 @@ export const metadata = {
     title: "Chalet Jaïa — Location à Gérardmer",
     description:
       "Louez le Chalet Jaïa à Gérardmer : 83 m², 6 personnes, poêle à pellets, wifi, borne électrique.",
-    images: ["/images/chalet/chaletHero.jpg"],
+    images: ["/images/chalet/exterieur-facade-soleil.jpg"],
   },
 };
 
@@ -46,7 +46,7 @@ const jsonLd = {
   "name": "Chalet Jaïa",
   "description": "Chalet chaleureux à Gérardmer pour 6 personnes, 83 m², poêle à pellets, wifi, borne électrique.",
   "url": "https://chalet-jaia.fr",
-  "image": "https://chalet-jaia.fr/images/chalet/chaletHero.jpg",
+  "image": "https://chalet-jaia.fr/images/chalet/exterieur-facade-soleil.jpg",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Gérardmer",

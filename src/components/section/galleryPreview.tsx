@@ -6,10 +6,10 @@ export default function GalleryPreview() {
             <div className="container-section">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
                     {[
-                        "/images/chalet/chalet1.jpg",
-                        "/images/chalet/chalet2.jpg",
-                        "/images/chalet/chalet3.jpg",
-                        "/images/chalet/chaletHero.jpg",
+                        "/images/chalet/exterieur-facade-soleil.jpg",
+                        "/images/chalet/salon-vue-panoramique.jpg",
+                        "/images/chalet/chambre-principale-vue-complete.jpg",
+                        "/images/chalet/cuisine-vue-ensemble.jpg",
                     ].map((src, i) => (
                         <div
                             key={i}
