@@ -25,7 +25,7 @@ export default function FeaturesBar() {
   return (
     <section className="bg-[#EBE2D6] py-8">
       <div className="container-section">
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 place-items-center">
+        <div className="grid grid-cols-3 gap-4 place-items-center">
             {features.map(({ label, icon: Icon }) => (
               <div
                 key={label}

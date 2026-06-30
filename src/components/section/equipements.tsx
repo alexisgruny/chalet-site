@@ -9,7 +9,7 @@ export default function Equipements() {
           Équipements
         </h2>
 
-        <div className="flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-2 md:overflow-visible md:pb-0 snap-x snap-mandatory">
+        <div className="grid gap-4 md:grid-cols-2">
           <EquipCard
             title="Cuisine"
             items={[
@@ -51,7 +51,7 @@ export default function Equipements() {
 
   function EquipCard({ title, items }: { title: string; items: string[] }) {
     return (
-      <div className="card flex-shrink-0 w-[75vw] sm:w-[55vw] md:w-auto snap-start">
+      <div className="card">
         <h3 className="card-title">{title}</h3>
         <ul className="card-list">
           {items.map((t) => (
