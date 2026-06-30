@@ -11,24 +11,17 @@ export const metadata = {
 const seasons = [
   {
     label: "Basse saison",
-    period: "Janv. – mars · Oct. – nov.",
-    week: "650 €",
-    weekend: "320 €",
+    period: "Hors vacances scolaires",
+    week: "À confirmer",
+    weekend: "À confirmer",
     highlight: false,
   },
   {
-    label: "Mi-saison",
-    period: "Avr. – juin · Sept.",
-    week: "850 €",
-    weekend: "420 €",
+    label: "Haute saison",
+    period: "Vacances scolaires",
+    week: "À confirmer",
+    weekend: "À confirmer",
     highlight: true,
-  },
-  {
-    label: "Haute saison (été et vacances scolaires)",
-    period: "Juil. – août · Déc. – vacances",
-    week: "1 100 €",
-    weekend: "550 €",
-    highlight: false,
   },
 ];
 
@@ -37,10 +30,13 @@ const included = [
   "Linge de maison fourni (serviettes, draps)",
   "Ménage de fin de séjour",
   "Wi-Fi haut débit",
-  "Accès borne de recharge électrique",
   "Parking privé gratuit",
   "Local vélo / ski sécurisé",
   "Arrivée autonome (boîte à clés)",
+];
+
+const supplements = [
+  "Borne de recharge électrique : 25 €/sem. (prix à confirmer)",
 ];
 
 const conditions = [
@@ -54,11 +50,11 @@ const conditions = [
   },
   {
     title: "Caution",
-    body: "500 € demandés à l'arrivée, restitués sous 7 jours après l'état des lieux de sortie.",
+    body: "1 000 € par chèque à l'arrivée, restitués après l'état des lieux de sortie. Une attestation de villégiature est requise.",
   },
   {
     title: "Animaux",
-    body: "Les animaux de compagnie sont acceptés sur demande préalable (supplément de 30 €).",
+    body: "Les animaux de compagnie ne sont pas acceptés.",
   },
   {
     title: "Annulation",
@@ -66,7 +62,7 @@ const conditions = [
   },
   {
     title: "Arrivée / Départ",
-    body: "Arrivée dès 16 h, départ avant 11 h. Horaires flexibles selon disponibilité.",
+    body: "Arrivée dès 16 h, départ avant 10 h 30. Horaires flexibles selon disponibilité.",
   },
 ];
 
@@ -106,7 +102,7 @@ export default function TarifsPage() {
             Tous les tarifs sont indiqués charges incluses (linge, ménage, Wi-Fi).
           </p>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 max-w-2xl mx-auto">
             {seasons.map(({ label, period, week, weekend, highlight }) => (
               <div
                 key={label}
@@ -168,6 +164,20 @@ export default function TarifsPage() {
                 <span className="text-white/90 text-sm leading-snug">{item}</span>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 border-t border-white/20 pt-6">
+            <p className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-3">Suppléments</p>
+            <div className="flex flex-col gap-2">
+              {supplements.map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <span className="mt-0.5 flex-shrink-0 h-5 w-5 rounded-full bg-white/10 flex items-center justify-center text-white/60 text-xs">
+                    +
+                  </span>
+                  <span className="text-white/70 text-sm leading-snug">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -22,8 +22,8 @@ export default function MentionsLegalesPage() {
             <div className="space-y-1 text-sm text-muted">
               <p><strong>Responsable de la publication :</strong> [Isabelle Gruny]</p>
               <p><strong>Email :</strong>{" "}
-                <a href="mailto:contact@chalet-jaia.fr" className="underline hover:text-[#3a4b3c]">
-                  contact@chalet-jaia.fr
+                <a href="mailto:chaletjaia@gmail.com" className="underline hover:text-[#3a4b3c]">
+                  chaletjaia@gmail.com
                 </a>
               </p>
               <p><strong>Localisation :</strong> Gérardmer, 88400 Vosges, France</p>

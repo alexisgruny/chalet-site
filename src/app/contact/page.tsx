@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Mail, Phone, Clock, Send, CheckCircle, AlertCircle, ChevronDown } from "lucide-react";
+import { Mail, Clock, Send, CheckCircle, AlertCircle, ChevronDown } from "lucide-react";
 import CallToAction from "@/components/section/callToAction";
 
 // ── Infos propriétaires — à personnaliser ──────────────────────────────────
@@ -10,14 +10,8 @@ const INFOS = [
   {
     icon: Mail,
     label: "Email",
-    value: "contact@chalet-jaia.fr",
-    href: "mailto:contact@chalet-jaia.fr",
-  },
-  {
-    icon: Phone,
-    label: "Téléphone",
-    value: "06 00 00 00 00",
-    href: "tel:+33600000000",
+    value: "chaletjaia@gmail.com",
+    href: "mailto:chaletjaia@gmail.com",
   },
   {
     icon: Clock,

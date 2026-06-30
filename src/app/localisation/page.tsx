@@ -210,7 +210,7 @@ export default function LocalisationPage() {
                 <h3 className="font-bold text-white">Horaires</h3>
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
-                Arrivée dès <strong className="text-white">16 h</strong> · Départ avant <strong className="text-white">11 h</strong>.
+                Arrivée dès <strong className="text-white">16 h</strong> · Départ avant <strong className="text-white">10 h 30</strong>.
                 Des horaires flexibles peuvent être arrangés selon disponibilité.
               </p>
             </div>

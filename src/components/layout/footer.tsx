@@ -23,18 +23,10 @@ export default function Footer() {
         <ul className="mt-3 space-y-2 text-sm">
           <li>
             <a
-              href="mailto:contact@chalet-jaia.fr"
+              href="mailto:chaletjaia@gmail.com"
               className="hover:text-[#3a4b3c] transition"
             >
-              contact@chalet-jaia.fr
-            </a>
-          </li>
-          <li>
-            <a
-              href="tel:+33600000000"
-              className="hover:text-[#3a4b3c] transition"
-            >
-              06 00 00 00 00
+              chaletjaia@gmail.com
             </a>
           </li>
           <li className="text-[#3a4b3c]/70">

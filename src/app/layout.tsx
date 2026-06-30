@@ -54,8 +54,7 @@ const jsonLd = {
     "postalCode": "88400",
     "addressCountry": "FR",
   },
-  "telephone": "+33600000000",
-  "email": "contact@chalet-jaia.fr",
+  "email": "chaletjaia@gmail.com",
   "amenityFeature": [
     { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Borne de recharge électrique", "value": true },

@@ -30,10 +30,10 @@ export default function Hero() {
               Chalet cosy à la montagne
             </h1>
             <p className="text-white/90 text-lg">
-              6 personnes • proche des pistes • vue panoramique
+              6 personnes • vue dégagée sur les Vosges
             </p>
             <div className="flex flex-wrap gap-2">
-              {["Cheminée", "Parking", "Wifi", "Terrasse"].map((t) => (
+              {["Poêle à pellets", "Climatisation", "Parking", "Wifi"].map((t) => (
                 <span key={t} className="bg-white/15 text-white px-3 py-1 rounded-full text-sm backdrop-blur">
                   {t}
                 </span>
@@ -53,10 +53,10 @@ export default function Hero() {
             Chalet cosy à la montagne
           </h1>
           <p className="text-white/85 text-base">
-            6 personnes • proche des pistes • vue panoramique
+            6 personnes • vue dégagée sur les Vosges
           </p>
           <div className="flex flex-wrap gap-2">
-            {["Cheminée", "Parking", "Wifi", "Terrasse"].map((t) => (
+            {["Poêle à pellets", "Climatisation", "Parking", "Wifi"].map((t) => (
               <span key={t} className="bg-white/15 text-white px-3 py-1 rounded-full text-sm backdrop-blur">
                 {t}
               </span>

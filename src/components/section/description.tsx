@@ -36,7 +36,7 @@ export default function Description() {
 
         <p className="text-lg">
           Entièrement équipé, le chalet dispose d’une cuisine moderne, d’un espace de vie
-          chaleureux avec poêle à pellets, d’une connexion Wi-Fi, ainsi que de tout le
+          chaleureux avec poêle à pellets et climatisation, d’une connexion Wi-Fi, ainsi que de tout le
           nécessaire pour un séjour sans contrainte. Les lits sont faits à votre arrivée
           et le linge de maison est fourni.
         </p>

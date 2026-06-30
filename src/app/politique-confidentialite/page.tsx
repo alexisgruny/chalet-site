@@ -69,8 +69,8 @@ export default function PolitiqueConfidentialitePage() {
             </ul>
             <p className="text-sm text-muted">
               Pour exercer ces droits, contactez-nous à :{" "}
-              <a href="mailto:contact@chalet-jaia.fr" className="underline hover:text-[#3a4b3c]">
-                contact@chalet-jaia.fr
+              <a href="mailto:chaletjaia@gmail.com" className="underline hover:text-[#3a4b3c]">
+                chaletjaia@gmail.com
               </a>
             </p>
           </div>
