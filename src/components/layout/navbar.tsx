@@ -50,7 +50,7 @@ export default function Navbar() {
       `}
     >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl text-[#3a4b3c]"> Chalet JAIA </Link>
+        <Link href="/" className="font-bold text-xl text-[#3a4b3c]"> Chalet Jaïa</Link>
         <button
           className="md:hidden text-[#3a4b3c] p-2 -mr-2"
           onClick={() => setOpen(!open)}

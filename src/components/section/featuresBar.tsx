@@ -18,7 +18,7 @@ const features: Feature[] = [
   { label: "2 ch + coin montagne", icon: Bed },
   { label: "Boite à clef", icon: KeyRound },
   { label: "Borne électrique", icon: BatteryCharging },
-  { label: "Poêle à granulé", icon: Flame },
+  { label: "Poêle à pellets", icon: Flame },
 ];
 
 export default function FeaturesBar() {
