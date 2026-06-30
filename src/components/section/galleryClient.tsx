@@ -28,7 +28,6 @@ const photos: Photo[] = [
     { src: "/images/chalet/exterieur-parking-vue-panoramique.jpg", alt: "Parking gravier et vue panoramique sur les montagnes", category: "Extérieur" },
     { src: "/images/chalet/exterieur-allee-carport.jpg", alt: "Allée d'accès et carport bois en automne", category: "Extérieur" },
     { src: "/images/chalet/exterieur-angle-vue-vosges.jpg", alt: "Angle du chalet avec vue dégagée sur les Vosges", category: "Extérieur" },
-    { src: "/images/chalet/exterieur-entree-carport-cle.jpg", alt: "Entrée couverte et boîtier de clés sécurisé", category: "Extérieur" },
     // Salon
     { src: "/images/chalet/salon-vue-panoramique.jpg", alt: "Salon avec grande fenêtre panoramique sur les Vosges", category: "Salon" },
     { src: "/images/chalet/salon-poele-vue-vosges.jpg", alt: "Poêle à bois et fenêtres vue sur les Vosges", category: "Salon" },

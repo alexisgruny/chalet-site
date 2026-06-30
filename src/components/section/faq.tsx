@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Peut-on recharger une voiture électrique&nbsp;?",
-    a: "Oui, le chalet dispose d'une borne de recharge incluse dans le tarif.",
+    a: "Oui, le chalet dispose d'une borne de recharge disponible en supplément (25 €/sem., prix à confirmer).",
   },
 ];
 
