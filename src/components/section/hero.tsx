@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative h-screen w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-16">
       {/* Image */}
       <Image
-        src="/images/chalet/exterieur-facade-soleil.jpg"
+        src="/images/chalet/exterieur-facade-hiver-sapin.jpg"
         alt="Chalet à la montagne"
         fill
         priority

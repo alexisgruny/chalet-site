@@ -57,7 +57,7 @@ export default function LocalisationPage() {
       <section className="w-full relative">
         <div className="relative h-[40vh] min-h-[320px] w-full">
           <Image
-            src="/images/chalet/exterieur-facade-soleil.jpg"
+            src="/images/chalet/exterieur-facade-hiver-sapin.jpg"
             alt="Accès au Chalet Jaïa"
             fill
             priority

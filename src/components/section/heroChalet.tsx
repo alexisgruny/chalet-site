@@ -9,7 +9,7 @@ return (
 
           {/* Image */}
           <Image
-            src="/images/chalet/exterieur-facade-soleil.jpg"
+            src="/images/chalet/exterieur-facade-hiver-sapin.jpg"
             alt="Chalet Jaïa à Gérardmer"
             fill
             priority

@@ -73,7 +73,7 @@ export default function TarifsPage() {
       <section className="w-full relative">
         <div className="relative h-[40vh] min-h-[320px] w-full">
           <Image
-            src="/images/chalet/exterieur-facade-soleil.jpg"
+            src="/images/chalet/exterieur-facade-hiver-sapin.jpg"
             alt="Chalet Jaïa — Tarifs"
             fill
             priority
