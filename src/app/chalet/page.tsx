@@ -8,7 +8,6 @@ import CallToAction from "@/components/section/callToAction";
 import Description from "@/components/section/description";
 import Sleeping from "@/components/section/sleeping";
 import Services from "@/components/section/services";
-import PricingPreview from "@/components/section/pricingPreview";
 
 export const metadata = {
   title: "Le chalet — Chalet Jaïa",
@@ -42,9 +41,6 @@ export default function ChaletPage() {
 
       {/* Activités */}
       <Activity />
-
-      {/* Tarifs et Reservations */}
-      <PricingPreview />
 
       {/* faq */}
       <FAQ />
