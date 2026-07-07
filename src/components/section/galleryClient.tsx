@@ -35,7 +35,6 @@ const photos: Photo[] = [
     { src: "/images/chalet/salon-vue-ensemble-mezzanine.jpg", alt: "Vue d'ensemble du salon avec mezzanine et table à manger", category: "Salon" },
     { src: "/images/chalet/salon-canape-mezzanine.jpg", alt: "Canapé, table basse et mezzanine", category: "Salon" },
     { src: "/images/chalet/salon-canape-vue-vosges.jpg", alt: "Canapé avec vue sur les Vosges par la porte vitrée", category: "Salon" },
-    { src: "/images/chalet/salon-fenetre-panoramique-vosges.jpg", alt: "Vue panoramique intérieure sur les Vosges", category: "Salon" },
     { src: "/images/chalet/salon-tv-meuble.jpg", alt: "Télévision murale et meuble TV en bois", category: "Salon" },
     { src: "/images/chalet/salon-tourne-disque-detail.jpg", alt: "Détail du tourne-disque vintage sous l'escalier", category: "Salon" },
     { src: "/images/chalet/salon-canape-escalier-vue.jpg", alt: "Salon avec escalier et vue extérieure en hiver", category: "Salon" },
@@ -58,8 +57,6 @@ const photos: Photo[] = [
     { src: "/images/chalet/cuisine-vue-ensemble.jpg", alt: "Cuisine noire équipée avec table en bois et four", category: "Cuisine" },
     { src: "/images/chalet/cuisine-table-four.jpg", alt: "Table en bois bord naturel et cuisine noire avec four", category: "Cuisine" },
     // Services
-    { src: "/images/chalet/salle-de-bain-douche.jpg", alt: "Salle de bain avec douche italienne et lavabo", category: "Services" },
-    { src: "/images/chalet/salle-de-bain-serviettes.jpg", alt: "Salle de bain avec porte-serviettes et carrelage béton", category: "Services" },
     { src: "/images/chalet/services-buanderie-machine.jpg", alt: "Buanderie avec lave-linge et sèche-linge", category: "Services" },
     { src: "/images/chalet/services-dressing-chambre.jpg", alt: "Dressing ouvert avec miroir et étagères", category: "Services" },
     { src: "/images/chalet/services-bibliotheque-jeux.jpg", alt: "Bibliothèque et jeux de société sous la mezzanine", category: "Services" },

@@ -12,15 +12,17 @@ const seasons = [
   {
     label: "Basse saison",
     period: "Hors vacances scolaires",
-    week: "À confirmer",
-    weekend: "À confirmer",
+    week: "1 300 €",
+    weekend: "462 €",
+    supplement: "171 €/nuit suppl.",
     highlight: false,
   },
   {
     label: "Haute saison",
     period: "Vacances scolaires",
-    week: "À confirmer",
-    weekend: "À confirmer",
+    week: "1 500 €",
+    weekend: "540 €",
+    supplement: "200 €/nuit suppl.",
     highlight: true,
   },
 ];
@@ -103,7 +105,7 @@ export default function TarifsPage() {
           </p>
 
           <div className="grid gap-6 md:grid-cols-2 max-w-2xl mx-auto">
-            {seasons.map(({ label, period, week, weekend, highlight }) => (
+            {seasons.map(({ label, period, week, weekend, supplement, highlight }) => (
               <div
                 key={label}
                 className={`card flex flex-col gap-4 ${
@@ -127,9 +129,12 @@ export default function TarifsPage() {
                     <span className="text-muted text-sm">Semaine</span>
                     <span className="text-lg font-bold text-[#3a4b3c]">{week}</span>
                   </div>
-                  <div className="flex items-baseline justify-between">
-                    <span className="text-muted text-sm">Week-end</span>
-                    <span className="text-base font-semibold text-[#3a4b3c]">{weekend}</span>
+                  <div className="flex items-start justify-between">
+                    <span className="text-muted text-sm">Week-end <span className="text-xs">(2 nuits min.)</span></span>
+                    <div className="text-right">
+                      <span className="text-base font-semibold text-[#3a4b3c]">{weekend}</span>
+                      <p className="text-xs text-muted">{supplement}</p>
+                    </div>
                   </div>
                 </div>
 

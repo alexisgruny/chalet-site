@@ -23,10 +23,19 @@ return (
         <li>• Lac de Gérardmer : baignade, pédalo, voile, canoë</li>
         <li>• Randonnées et VTT dans les Vosges</li>
         <li>• Lac de Longemer (Xonrupt)</li>
-        <li>• Parapente, Bol d’Air (La Bresse)</li>
+        <li>• Parapente, Bol d'Air (La Bresse)</li>
       </ul>
     </div>
   </div>
+
+  <div className="mt-4 card">
+    <h3 className="card-title">Espace extérieur</h3>
+    <p className="text-muted text-sm leading-relaxed">
+      Profitez d&apos;un espace dédié aux loisirs, avec zone en gravillons parfaite pour une partie de boules, des jeux en famille.
+      Les boules et jeux de quilles sont mis à votre disposition sur place afin de partager un bon moment en plein air.
+    </p>
+  </div>
+
   </div>
 </section>
 );
