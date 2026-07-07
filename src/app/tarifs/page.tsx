@@ -13,8 +13,8 @@ const seasons = [
     label: "Basse saison",
     period: "Hors vacances scolaires",
     week: "1 300 €",
-    weekend: "462 €",
-    supplement: "171 €/nuit suppl.",
+    weekend: "460 €",
+    supplement: "170 €/nuit suppl.",
     highlight: false,
   },
   {
@@ -65,6 +65,10 @@ const conditions = [
   {
     title: "Arrivée / Départ",
     body: "Arrivée dès 16 h, départ avant 10 h 30. Horaires flexibles selon disponibilité.",
+  },
+  {
+    title: "Taxe de séjour",
+    body: "Taxe de séjour en sus, selon la réglementation en vigueur à Gérardmer, par personne et par nuit.",
   },
 ];
 
