@@ -118,11 +118,9 @@ export default function TarifsPage() {
                     : ""
                 }`}
               >
-                {highlight && (
-                  <span className="self-start bg-[#3a4b3c] text-[#EBE2D6] text-xs font-semibold px-3 py-1 rounded-full">
-                    Le plus demandé
-                  </span>
-                )}
+                <span className={`self-start text-xs font-semibold px-3 py-1 rounded-full ${highlight ? "bg-[#3a4b3c] text-[#EBE2D6]" : "invisible"}`}>
+                  Le plus demandé
+                </span>
                 <div>
                   <h3 className="text-xl font-bold text-[#3a4b3c]">{label}</h3>
                   <p className="text-sm text-[#3a4b3c]/60 mt-1">{period}</p>
