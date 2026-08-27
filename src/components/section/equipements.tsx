@@ -13,6 +13,8 @@ export default function Equipements() {
           <EquipCard
             title="Cuisine"
             items={[
+              "Plaque à induction",
+              "Hotte connectée",
               "Four, micro-ondes",
               "Lave-vaisselle",
               "Frigo combiné",

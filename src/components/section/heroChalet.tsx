@@ -1,24 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroChalet() {
 return (
 
 <section className="w-full relative">
-        <div className="relative h-[70vh] min-h-[520px] md:h-[40vh] md:min-h-[320px] w-full">
-
-          {/* Image */}
-          <Image
-            src="/images/chalet/exterieur-facade-hiver-sapin.jpg"
-            alt="Chalet Jaïa à Gérardmer"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/45" />
+        <div className="relative h-[70vh] min-h-[520px] md:h-[40vh] md:min-h-[320px] w-full bg-[#3a4b3c]">
 
           {/* Content */}
         <div className="absolute inset-0 flex items-end">

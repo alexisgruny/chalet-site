@@ -5,12 +5,7 @@ export default function GalleryPreview() {
         <section className="section-beige">
             <div className="container-section">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
-                    {[
-                        "/images/chalet/exterieur-facade-soleil.jpg",
-                        "/images/chalet/salon-vue-panoramique.jpg",
-                        "/images/chalet/chambre-principale-vue-complete.jpg",
-                        "/images/chalet/cuisine-vue-ensemble.jpg",
-                    ].map((src, i) => (
+                    {([] as string[]).map((src, i) => (
                         <div
                             key={i}
                             className={`aspect-square overflow-hidden rounded-xl group ${i >= 2 ? "hidden md:block" : ""}`}

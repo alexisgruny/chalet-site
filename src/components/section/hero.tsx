@@ -1,22 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-16">
-      {/* Image */}
-      <Image
-        src="/images/chalet/exterieur-facade-hiver-sapin.jpg"
-        alt="Chalet à la montagne"
-        fill
-        priority
-        className="object-cover"
-        sizes="100vw"
-      />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/25" />
-
+    <section className="relative h-screen w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-16 bg-[#3a4b3c]">
       {/* Gradient mobile (bas → haut) */}
       <div className="md:hidden absolute inset-0 bg-gradient-to-t from-[#3a4b3c]/90 via-[#3a4b3c]/30 to-transparent" />
 

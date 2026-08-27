@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import CallToAction from "@/components/section/callToAction";
 
@@ -12,25 +11,32 @@ const seasons = [
   {
     label: "Basse saison",
     period: "Hors vacances scolaires",
-    week: "1 300 €",
-    weekend: "460 €",
-    supplement: "170 €/nuit suppl.",
+    week: "1 280 €",
+    weekend: "450 €",
+    supplement: "183 €/nuit suppl.",
     highlight: false,
   },
   {
-    label: "Haute saison",
+    label: "Moyenne saison",
     period: "Vacances scolaires",
-    week: "1 500 €",
-    weekend: "540 €",
-    supplement: "200 €/nuit suppl.",
+    week: "1 480 €",
+    weekend: "496 €",
+    supplement: "211 €/nuit suppl.",
     highlight: true,
+  },
+  {
+    label: "Haute saison",
+    period: "Noël, Nouvel an, festivités",
+    week: "1 780 €",
+    weekend: "592 €",
+    supplement: "254 €/nuit suppl.",
+    highlight: false,
   },
 ];
 
 const included = [
   "Lits faits à votre arrivée",
   "Linge de maison fourni (serviettes, draps)",
-  "Ménage de fin de séjour",
   "Wi-Fi haut débit",
   "Parking privé gratuit",
   "Local vélo / ski sécurisé",
@@ -38,7 +44,9 @@ const included = [
 ];
 
 const supplements = [
-  "Borne de recharge électrique : 25 €/sem. (prix à confirmer)",
+  "Forfait ménage : 120 €",
+  "Taxe de séjour en sus (par personne et par nuit)",
+  "Borne de recharge électrique : 25 € le week-end, 45 € la semaine",
 ];
 
 const conditions = [
@@ -52,7 +60,7 @@ const conditions = [
   },
   {
     title: "Caution",
-    body: "1 000 € par chèque à l'arrivée, restitués après l'état des lieux de sortie. Une attestation de villégiature est requise.",
+    body: "Caution par carte bancaire (Stripe), restituée 1 semaine après la fin du séjour.",
   },
   {
     title: "Animaux",
@@ -64,7 +72,7 @@ const conditions = [
   },
   {
     title: "Arrivée / Départ",
-    body: "Arrivée dès 16 h, départ avant 10 h 30. Horaires flexibles selon disponibilité.",
+    body: "Arrivée dès 16 h, départ avant 10 h.",
   },
   {
     title: "Taxe de séjour",
@@ -77,16 +85,7 @@ export default function TarifsPage() {
     <>
       {/* ── Hero ── */}
       <section className="w-full relative">
-        <div className="relative h-[40vh] min-h-[320px] w-full">
-          <Image
-            src="/images/chalet/exterieur-facade-hiver-sapin.jpg"
-            alt="Chalet Jaïa — Tarifs"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/50" />
+        <div className="relative h-[40vh] min-h-[320px] w-full bg-[#3a4b3c]">
           <div className="absolute inset-0 flex items-end">
             <div className="container-section pb-10">
               <h1 className="text-3xl md:text-5xl font-bold text-white">
@@ -105,10 +104,10 @@ export default function TarifsPage() {
         <div className="container-section">
           <h2 className="title-section-beige">Prix selon la saison</h2>
           <p className="text-muted mb-8 max-w-2xl">
-            Tous les tarifs sont indiqués charges incluses (linge, ménage, Wi-Fi).
+            Tous les tarifs sont indiqués charges incluses (linge, Wi-Fi). Forfait ménage en supplément.
           </p>
 
-          <div className="grid gap-6 md:grid-cols-2 max-w-2xl mx-auto">
+          <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
             {seasons.map(({ label, period, week, weekend, supplement, highlight }) => (
               <div
                 key={label}

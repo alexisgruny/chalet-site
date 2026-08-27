@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 
@@ -11,16 +10,7 @@ export default function Description() {
       
 
       {/* Image — cachée sur mobile */}
-      <div className="hidden md:block order-2 md:order-1 relative md:h-[450px] w-full overflow-hidden rounded-2xl">
-        <Image
-          src="/images/chalet/salon-vue-panoramique.jpg"
-          alt="Chalet Jaïa"
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
-          priority
-        />
-      </div>
+      <div className="hidden md:block order-2 md:order-1 relative md:h-[450px] w-full overflow-hidden rounded-2xl bg-white/10" />
 {/* Texte */}
       <div className="order-1 md:order-2 text-white space-y-6">
         <h2 className="text-2xl md:text-3xl font-bold">
