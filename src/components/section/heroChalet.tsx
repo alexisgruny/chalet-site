@@ -1,10 +1,24 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroChalet() {
 return (
 
 <section className="w-full relative">
-        <div className="relative h-[70vh] min-h-[520px] md:h-[40vh] md:min-h-[320px] w-full bg-[#3a4b3c]">
+        <div className="relative h-[70vh] min-h-[520px] md:h-[40vh] md:min-h-[320px] w-full">
+
+          {/* Image */}
+          <Image
+            src="/images/chalet/salon-salle-a-manger/salon-vue-ensemble-mezzanine-baies.jpg"
+            alt="Chalet Jaïa à Gérardmer"
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/45" />
 
           {/* Content */}
         <div className="absolute inset-0 flex items-end">
