@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative h-[100svh] min-h-[32rem] w-full -mt-16 overflow-hidden">
       {/* Image */}
       <Image
-        src="/images/chalet/salon/salon1.jpeg"
+        src="/images/chalet/exterieur/exterieur30.jpg"
         alt="Chalet à la montagne"
         fill
         priority
