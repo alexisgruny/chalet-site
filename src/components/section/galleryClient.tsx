@@ -84,13 +84,29 @@ const galleryFolders: {
     },
 ];
 
-const photos: Photo[] = galleryFolders.flatMap(({ directory, category, files }) =>
+const galleryFolderOrder = [
+    "entree",
+    "salon",
+    "salle",
+    "cuisine",
+    "chambre-bas",
+    "chambre-haut",
+    "coin-montagne",
+    "salle-de-bain",
+    "toilette",
+    "exterieur",
+    "local-technique",
+];
+
+const photos: Photo[] = [...galleryFolders]
+    .sort((a, b) => galleryFolderOrder.indexOf(a.directory) - galleryFolderOrder.indexOf(b.directory))
+    .flatMap(({ directory, category, files }) =>
     files.map((file) => ({
         src: "/images/chalet/" + directory + "/" + encodeURIComponent(file),
         alt: category + " - " + file.replace(/\.[^.]+$/, "").replace(/[-_]+/g, " "),
         category,
     })),
-);
+    );
 
 const categories: Category[] = [
     "Tout",
