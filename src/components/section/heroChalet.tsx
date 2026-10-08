@@ -32,7 +32,7 @@ return (
               </p>
 
               <p className="text-white/85 mt-3 max-w-2xl">
-                Chalet tout confort dans les Vosges, à 7 km du lac de Gérardmer : poêle à pellets,
+                Chalet tout confort dans les Vosges, à 8 minutes en voiture du lac de Gérardmer : poêle à pellets,
                 climatisation, wifi, arrivée autonome et linge inclus.
               </p>
 

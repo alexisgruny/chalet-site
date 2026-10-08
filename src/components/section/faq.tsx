@@ -5,8 +5,8 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "À quelle distance est le lac de Gérardmer\u00a0?",
-    a: "Le chalet se situe à environ 7 km du lac de Gérardmer, soit 10 minutes en voiture.",
+    q: "Combien de temps faut-il pour rejoindre le lac de Gérardmer\u00a0?",
+    a: "Le lac de Gérardmer se trouve à environ 8 minutes en voiture du chalet.",
   },
   {
     q: "Le linge est-il fourni\u00a0?",
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Peut-on recharger une voiture électrique\u00a0?",
-    a: "Oui, le chalet dispose d'une borne de recharge disponible en supplément (25 €/sem., prix à confirmer).",
+    a: "Oui, le chalet dispose d'une borne de recharge : 25 € le week-end ou 45 € la semaine.",
   },
 ];
 

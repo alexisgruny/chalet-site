@@ -12,7 +12,7 @@ export const metadata = createPageMetadata({
 });
 
 const distances = [
-  { lieu: "Lac de Gérardmer", distance: "7 km", duree: "10 min" },
+  { lieu: "Lac de Gérardmer", duree: "8 min" },
   { lieu: "Centre-ville de Gérardmer", distance: "7,8 km", duree: "12 min" },
   { lieu: "Station ski Gérardmer", distance: "9,8 km", duree: "15 min" },
   { lieu: "Station ski La Bresse", distance: "22 km", duree: "28 min" },
@@ -135,7 +135,7 @@ export default function LocalisationPage() {
       {/* ── Distances ── */}
       <section className="section-green">
         <div className="container-section">
-          <h2 className="title-section-green">Distances depuis le chalet</h2>
+          <h2 className="title-section-green">Distances et temps de trajet depuis le chalet</h2>
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {distances.map(({ lieu, distance, duree }) => (
@@ -145,10 +145,12 @@ export default function LocalisationPage() {
               >
                 <p className="font-semibold text-white text-sm">{lieu}</p>
                 <div className="flex items-center gap-3 text-white/70 text-sm mt-1">
-                  <span className="flex items-center gap-1">
-                    <MapPin className="h-3 w-3" />
-                    {distance}
-                  </span>
+                  {distance && (
+                    <span className="flex items-center gap-1">
+                      <MapPin className="h-3 w-3" />
+                      {distance}
+                    </span>
+                  )}
                   <span className="flex items-center gap-1">
                     <Car className="h-3 w-3" />
                     <Clock className="h-3 w-3" />
@@ -198,11 +200,11 @@ export default function LocalisationPage() {
             <div className="card-dark space-y-2">
               <div className="flex items-center gap-3 mb-3">
                 <KeyRound className="h-5 w-5 text-[#EBE2D6]" />
-                <h3 className="font-bold text-white">Arrivée autonome</h3>
+                <h3 className="font-bold text-white">Arrivée autonome ou sur rendez-vous</h3>
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
                 Le chalet est équipé d&apos;une boîte à clés sécurisée. Le code vous sera
-                transmis par message 24 h avant votre arrivée.
+                transmis avant votre arrivée. Une arrivée sur rendez-vous est également possible.
               </p>
             </div>
 

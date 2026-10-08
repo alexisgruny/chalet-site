@@ -1,10 +1,13 @@
 const services = [
   {
-    title: "Conciergerie",
+    title: "Conciergerie à la carte",
     items: [
-      "Arrivée autonome par boîte à clés sécurisée",
-      "Code transmis 24 h avant l'arrivée",
-      "Réponse directe des propriétaires",
+      "Arrivée autonome ou sur rendez-vous",
+      "Livraison de vos courses et du petit-déjeuner",
+      "Baby-sitting",
+      "Réservation d'activités et organisation d'événements",
+      "Massage à domicile",
+      "Autres demandes particulières",
     ],
   },
   {
@@ -13,6 +16,7 @@ const services = [
       "Lits faits à votre arrivée",
       "Serviettes et draps fournis",
       "Ménage de fin de séjour inclus",
+      "Ménage pendant le séjour sur demande (en supplément)",
     ],
   },
   {

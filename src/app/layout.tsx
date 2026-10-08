@@ -10,14 +10,14 @@ export const metadata: Metadata = {
     template: "%s — Chalet Jaïa",
   },
   description:
-    "Louez le Chalet Jaïa à Gérardmer : chalet de 83 m² pour 6 personnes, à 7 km du lac et des pistes. Découvrez les équipements, tarifs et disponibilités.",
+    "Louez le Chalet Jaïa à Gérardmer : chalet de 83 m² pour 6 personnes, à 8 minutes en voiture du lac et des pistes. Découvrez les équipements, tarifs et disponibilités.",
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Chalet Jaïa — Location à Gérardmer",
     description:
-      "Louez le Chalet Jaïa à Gérardmer : chalet de 83 m² pour 6 personnes, à 7 km du lac et des pistes.",
+      "Louez le Chalet Jaïa à Gérardmer : chalet de 83 m² pour 6 personnes, à 8 minutes en voiture du lac et des pistes.",
     url: SITE_URL,
     siteName: "Chalet Jaïa",
     locale: "fr_FR",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Chalet Jaïa — Location à Gérardmer",
     description:
-      "Chalet de 83 m² pour 6 personnes à Gérardmer, à 7 km du lac et des pistes.",
+      "Chalet de 83 m² pour 6 personnes à Gérardmer, à 8 minutes en voiture du lac et des pistes.",
     images: [SOCIAL_IMAGE],
   },
 };
@@ -44,7 +44,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["LodgingBusiness", "VacationRental"],
   "name": "Chalet Jaïa",
-  "description": "Chalet de vacances de 83 m² à Gérardmer, pouvant accueillir jusqu'à 6 personnes, à 7 km du lac et des pistes.",
+  "description": "Chalet de vacances de 83 m² à Gérardmer, pouvant accueillir jusqu'à 6 personnes, à 8 minutes en voiture du lac et des pistes.",
   "url": SITE_URL,
   "image": `${SITE_URL}${SOCIAL_IMAGE}`,
   "address": {

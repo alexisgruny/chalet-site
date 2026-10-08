@@ -12,7 +12,7 @@ export default function Localisation() {
                     <div className="card">
                         <h3 className="font-bold text-lg text-[#3a4b3c]">Distances</h3>
                         <ul className="mt-4 space-y-2 text-[#3a4b3c]/70">
-                            <li>• Lac de Gérardmer : 7 km</li>
+                            <li>• Lac de Gérardmer : 8 min en voiture</li>
                             <li>• Centre-ville : 7,8 km</li>
                             <li>• Station de ski Gérardmer : 9,8 km</li>
                             <li>• Station de ski La Bresse : 22 km</li>

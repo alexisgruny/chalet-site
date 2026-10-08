@@ -28,7 +28,7 @@ export default function Description() {
         </h2>
 
         <p className="text-lg">
-          Situé dans un cadre paisible à seulement 7 km du lac de Gérardmer, le Chalet Jaïa
+          Situé dans un cadre paisible à seulement 8 minutes en voiture du lac de Gérardmer, le Chalet Jaïa
           vous accueille pour un séjour confortable et lumineux au cœur des Vosges.
           D’une superficie de 83 m², il peut accueillir jusqu’à 6 personnes avec ses
           deux chambres et son coin montagne.
