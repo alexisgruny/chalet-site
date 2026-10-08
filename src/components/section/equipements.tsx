@@ -1,67 +1,150 @@
+import {
+  Baby,
+  Bath,
+  BedDouble,
+  BookOpen,
+  CarFront,
+  CookingPot,
+  KeyRound,
+  ShieldCheck,
+  Thermometer,
+  Trees,
+  Wifi,
+  type LucideIcon,
+} from "lucide-react";
 
+const amenities: {
+  title: string;
+  icon: LucideIcon;
+  items: string[];
+}[] = [
+  {
+    title: "Salle de bain",
+    icon: Bath,
+    items: ["Sèche-cheveux", "Produits de nettoyage", "Eau chaude"],
+  },
+  {
+    title: "Chambre et linge",
+    icon: BedDouble,
+    items: [
+      "Lave-linge et sèche-linge",
+      "Serviettes, draps, savon et papier toilette",
+      "Linge de lit en coton",
+      "Cintres, fer à repasser et étendoir à linge",
+      "Stores ou rideaux occultants",
+      "Placard de rangement pour les vêtements",
+    ],
+  },
+  {
+    title: "Divertissement",
+    icon: BookOpen,
+    items: [
+      "Télévision",
+      "Tourne-disque et système audio Bluetooth",
+      "Livres et de quoi lire",
+    ],
+  },
+  {
+    title: "Famille",
+    icon: Baby,
+    items: [
+      "Lit parapluie avec draps, sur demande",
+      "Chaise haute pliable, sur demande",
+      "Baignoire pour bébé, sur demande",
+      "Table à langer",
+      "Livres et jouets pour enfants de 5 à 10 ans et de plus de 10 ans",
+      "Jeux de société",
+    ],
+  },
+  {
+    title: "Chauffage et climatisation",
+    icon: Thermometer,
+    items: ["Climatisation", "Poêle à granulés", "Chauffage"],
+  },
+  {
+    title: "Sécurité à la maison",
+    icon: ShieldCheck,
+    items: ["Détecteur de fumée", "Trousse de premiers secours"],
+  },
+  {
+    title: "Internet et bureau",
+    icon: Wifi,
+    items: ["Wi-Fi", "Espace de travail dédié"],
+  },
+  {
+    title: "Cuisine et salle à manger",
+    icon: CookingPot,
+    items: [
+      "Cuisine équipée pour préparer vos repas",
+      "Réfrigérateur et congélateur",
+      "Four et four à micro-ondes",
+      "Plaques de cuisson",
+      "Lave-vaisselle",
+      "Casseroles, poêles, vaisselle et couverts",
+      "Huile, sel et poivre",
+      "Bouilloire électrique, grille-pain et blender",
+      "Verres à vin, table à manger et café",
+    ],
+  },
+  {
+    title: "Extérieur",
+    icon: Trees,
+    items: [
+      "Arrière-cour privée",
+      "Espace repas en plein air",
+      "Barbecue électrique et ustensiles de barbecue",
+      "Chaises longues",
+      "Compost",
+    ],
+  },
+  {
+    title: "Parking et installations",
+    icon: CarFront,
+    items: [
+      "Parking privé gratuit pour 2 véhicules, dont 1 place sous abri",
+      "Recharge pour véhicule électrique",
+      "Local vélo et ski sécurisé",
+    ],
+  },
+  {
+    title: "Services",
+    icon: KeyRound,
+    items: ["Arrivée autonome", "Boîte à clés sécurisée"],
+  },
+];
 
 export default function Equipements() {
-
   return (
     <section className="section-beige">
       <div className="container-section">
-        <h2 className="title-section-beige mb-8">
-          Équipements
-        </h2>
+        <div className="mb-8 max-w-3xl">
+          <h2 className="title-section-beige">Ce que propose ce logement</h2>
+          <p className="text-muted">
+            Retrouvez les équipements et attentions prévus pour votre séjour au Chalet Jaïa.
+          </p>
+        </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
-          <EquipCard
-            title="Cuisine"
-            items={[
-              "Plaque à induction",
-              "Hotte connectée",
-              "Four, micro-ondes",
-              "Lave-vaisselle",
-              "Frigo combiné",
-              "Cookeo, robot multifonction",
-              "Barbecue Ninja multifonction",
-            ]}
-          />
-          <EquipCard
-            title="Confort"
-            items={[
-              "Poêle à pellets",
-              "Climatisation",
-              "Wifi",
-              "Salon / salle de séjour",
-              "Très lumineux",
-            ]}
-          />
-          <EquipCard
-            title="Multimédia"
-            items={["Grand écran TV salon", "TV dans 1 chambre", "TV coin montagne", "Platine vinyle bluetooth"]}
-          />
-          <EquipCard
-            title="Pratique"
-            items={[
-              "Lave-linge + sèche-linge",
-              "Local vélo / ski",
-              "Borne électrique",
-              "Conciergerie",
-            ]}
-          />
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          {amenities.map(({ title, icon: Icon, items }) => (
+            <section key={title} className="card">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#3a4b3c]/10">
+                  <Icon className="h-5 w-5 text-[#3a4b3c]" aria-hidden="true" />
+                </span>
+                <h3 className="text-lg font-bold text-[#3a4b3c]">{title}</h3>
+              </div>
+              <ul className="space-y-2">
+                {items.map((item) => (
+                  <li key={item} className="flex gap-2 text-sm leading-relaxed text-[#3a4b3c]/75">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3a4b3c]/50" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
         </div>
       </div>
     </section>
-
   );
-
-  function EquipCard({ title, items }: { title: string; items: string[] }) {
-    return (
-      <div className="card">
-        <h3 className="card-title">{title}</h3>
-        <ul className="card-list">
-          {items.map((t) => (
-            <li key={t}>• {t}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-
 }

@@ -15,8 +15,7 @@ const services = [
     items: [
       "Lits faits à votre arrivée",
       "Serviettes et draps fournis",
-      "Forfait ménage obligatoire de fin de séjour : 120 € (non inclus dans le tarif)",
-      "Logement à laisser rangé, vaisselle faite et poubelles sorties",
+      "Forfait ménage de fin de séjour en option : 120 €",
       "Ménage pendant le séjour sur demande (en supplément)",
     ],
   },
@@ -24,7 +23,7 @@ const services = [
     title: "Équipements inclus",
     items: [
       "Wi-Fi haut débit",
-      "Parking privé gratuit (2 véhicules)",
+      "Parking privé gratuit pour 2 véhicules, dont 1 place sous abri",
       "Local vélo / ski sécurisé",
     ],
   },

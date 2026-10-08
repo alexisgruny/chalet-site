@@ -7,7 +7,7 @@ export default function PricingPreview() {
         <h2 className="title-section-beige">Tarifs</h2>
         <p className="text-muted mb-8 max-w-2xl">
           Deux tarifs selon la période : basse saison (hors vacances scolaires) et haute saison
-          (vacances scolaires). Linge et Wi-Fi inclus. Forfait ménage obligatoire de 120 € en supplément.
+          (vacances scolaires). Linge et Wi-Fi inclus. Forfait ménage de fin de séjour en option : 120 €.
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2 max-w-xl">
