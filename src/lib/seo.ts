@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://chalet-jaia.fr";
+export const SITE_URL = "https://chaletjaia.fr";
 export const SOCIAL_IMAGE = "/chalet-jaia-social.jpg";
 
 type PageMetadata = {
