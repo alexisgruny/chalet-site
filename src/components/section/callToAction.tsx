@@ -22,7 +22,7 @@ export default function CallToAction({ hideContact = false, hideTarifs = false }
                             <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
                                 {!hideContact && (
                                     <a href="/contact" className="btn-primary">
-                                        Nous contacter
+                                        Demander une réservation
                                     </a>
                                 )}
 

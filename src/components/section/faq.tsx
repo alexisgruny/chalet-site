@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "L'arrivée est-elle autonome\u00a0?",
-    a: "Oui, grâce à une boîte à clés sécurisée. Le code vous est transmis 24 h avant votre arrivée.",
+    a: "Oui, grâce à une boîte à clés sécurisée. Le code vous sera transmis 24 h avant votre arrivée.",
   },
   {
     q: "Peut-on recharger une voiture électrique\u00a0?",

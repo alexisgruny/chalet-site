@@ -163,28 +163,45 @@ export default function GalleryClient() {
                                     Découvrez le Chalet Jaïa pièce par pièce : séjour, cuisine, chambres et espaces de vie.
                                 </p>
                             </div>
-                            <div className="flex flex-wrap gap-2">
-                                {categories.map((c) => (
-                                    <button
-                                        key={c}
-                                        onClick={() => setActive(c)}
-                                        className={`px-4 py-2 rounded-full text-sm font-semibold transition
-                                            ${active === c
-                                                ? "bg-white text-[#3a4b3c]"
-                                                : "bg-white/20 text-white hover:bg-white/30"
-                                            }`}
-                                    >
-                                        {c}
-                                    </button>
-                                ))}
-                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <section className="bg-[#EBE2D6] py-5 sm:py-6" aria-label="Filtres de la galerie">
+                <div className="container-section">
+                    <div className="flex items-center justify-between gap-4 mb-3">
+                        <p className="text-sm font-semibold text-[#3a4b3c]">
+                            {filtered.length} {filtered.length === 1 ? "photo" : "photos"}
+                        </p>
+                        <p className="text-xs text-[#3a4b3c]/60 md:hidden">Faites défiler les filtres →</p>
+                    </div>
+                    <div
+                        role="group"
+                        aria-label="Filtrer les photos par pièce"
+                        className="flex gap-2 overflow-x-auto pb-2 md:flex-wrap md:overflow-visible"
+                    >
+                        {categories.map((c) => (
+                            <button
+                                key={c}
+                                type="button"
+                                onClick={() => setActive(c)}
+                                aria-pressed={active === c}
+                                className={`shrink-0 rounded-full px-4 py-2.5 text-sm font-semibold transition
+                                    ${active === c
+                                        ? "bg-[#3a4b3c] text-white"
+                                        : "bg-white text-[#3a4b3c] hover:bg-[#3a4b3c]/10"
+                                    }`}
+                            >
+                                {c}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Grille premium full width */}
-            <div className="w-full px-4 sm:px-6 lg:px-12 pb-14 mt-8 md:mt-12">
+            <div className="w-full px-4 sm:px-6 lg:px-12 pb-14 mt-5 md:mt-8">
                 {/* Rangée premium (1 grande + 4 petites) */}
                 {filtered.length >= 5 && (
                     <div className="grid gap-3 md:gap-4 md:grid-cols-2 mb-4">

@@ -51,7 +51,7 @@ export default function Navbar() {
           Chalet Jaïa
         </Link>
         <button
-          className="md:hidden text-[#3a4b3c] p-2 -mr-2"
+          className="lg:hidden text-[#3a4b3c] p-2 -mr-2"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={open}
@@ -59,7 +59,7 @@ export default function Navbar() {
         >
           <span className="text-2xl leading-none" aria-hidden="true">{open ? "✕" : "☰"}</span>
         </button>
-        <nav aria-label="Navigation principale" className="hidden md:flex items-center gap-6">
+        <nav aria-label="Navigation principale" className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -72,14 +72,14 @@ export default function Navbar() {
           ))}
 
           <Link href="/contact" className="btn-primary px-4 py-2 !rounded">
-            Réserver
+            Demander une réservation
           </Link>
         </nav>
 
         {/* Backdrop mobile */}
         {open && (
           <div
-            className="md:hidden fixed inset-0 top-16 bg-black/20 z-40"
+            className="lg:hidden fixed inset-0 top-16 bg-black/20 z-40"
             onClick={() => setOpen(false)}
             aria-hidden="true"
           />
@@ -88,7 +88,7 @@ export default function Navbar() {
         {/* Menu mobile */}
         <div
           id="mobile-navigation"
-          className={`md:hidden absolute top-full left-0 bg-[#3a4b3c] w-full border-t border-white/10 shadow-lg z-50 ${open ? "" : "hidden"}`}
+          className={`lg:hidden absolute top-full left-0 bg-[#3a4b3c] w-full border-t border-white/10 shadow-lg z-50 ${open ? "" : "hidden"}`}
         >
           <nav aria-label="Navigation mobile" className="flex flex-col p-5 gap-1">
             {navLinks.map((link) => (
@@ -108,7 +108,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="btn-secondary flex items-center justify-center w-full"
               >
-                Réserver
+                Demander une réservation
               </Link>
             </div>
           </nav>

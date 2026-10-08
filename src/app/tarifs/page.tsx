@@ -47,7 +47,8 @@ const included = [
 ];
 
 const supplements = [
-  "Forfait ménage : 120 €",
+  "Forfait ménage obligatoire de fin de séjour : 120 € (non inclus dans le tarif)",
+  "Logement à laisser rangé, vaisselle faite et poubelles sorties",
   "Taxe de séjour en sus (par personne et par nuit)",
   "Borne de recharge électrique : 25 € le week-end, 45 € la semaine",
 ];
@@ -116,10 +117,10 @@ export default function TarifsPage() {
         <div className="container-section">
           <h2 className="title-section-beige">Prix selon la saison</h2>
           <p className="text-muted mb-8 max-w-2xl">
-            Tous les tarifs sont indiqués charges incluses (linge, Wi-Fi). Forfait ménage en supplément.
+            Linge et Wi-Fi inclus. Forfait ménage obligatoire : 120 €, non inclus dans le tarif.
           </p>
 
-          <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 max-w-5xl mx-auto">
             {seasons.map(({ label, period, week, weekend, supplement, highlight }) => (
               <div
                 key={label}
@@ -137,22 +138,22 @@ export default function TarifsPage() {
                   <p className="text-sm text-[#3a4b3c]/60 mt-1">{period}</p>
                 </div>
 
-                <div className="space-y-2 pt-2 border-t border-gray-100">
+                <div className="space-y-4 pt-4 border-t border-gray-100">
                   <div className="flex items-baseline justify-between">
                     <span className="text-muted text-sm">Semaine</span>
-                    <span className="text-lg font-bold text-[#3a4b3c]">{week}</span>
+                    <span className="text-xl sm:text-2xl font-bold text-[#3a4b3c]">{week}</span>
                   </div>
-                  <div className="flex items-start justify-between">
+                  <div className="flex items-start justify-between gap-4">
                     <span className="text-muted text-sm">Week-end <span className="text-xs">(2 nuits min.)</span></span>
                     <div className="text-right">
-                      <span className="text-base font-semibold text-[#3a4b3c]">{weekend}</span>
+                      <span className="text-lg font-semibold text-[#3a4b3c]">{weekend}</span>
                       <p className="text-xs text-muted">{supplement}</p>
                     </div>
                   </div>
                 </div>
 
-                <Link href="/contact" className="btn-primary mt-auto text-center text-sm">
-                  Demander ce créneau
+                <Link href="/contact" className="btn-primary mt-auto min-h-12 text-center text-sm">
+                  Demander une réservation
                 </Link>
               </div>
             ))}

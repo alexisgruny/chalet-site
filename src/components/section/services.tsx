@@ -15,7 +15,8 @@ const services = [
     items: [
       "Lits faits à votre arrivée",
       "Serviettes et draps fournis",
-      "Ménage de fin de séjour inclus",
+      "Forfait ménage obligatoire de fin de séjour : 120 € (non inclus dans le tarif)",
+      "Logement à laisser rangé, vaisselle faite et poubelles sorties",
       "Ménage pendant le séjour sur demande (en supplément)",
     ],
   },

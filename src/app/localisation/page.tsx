@@ -101,8 +101,7 @@ export default function LocalisationPage() {
               <div className="h-px bg-gray-100" />
 
               <div className="space-y-2 text-muted text-sm">
-                <p>L&apos;adresse exacte est communiquée après confirmation de la réservation.</p>
-                <p>Coordonnées GPS transmises avec la confirmation de réservation.</p>
+                <p>L&apos;adresse exacte et les coordonnées GPS vous seront communiquées 24 h avant votre arrivée.</p>
               </div>
 
               <a
@@ -204,7 +203,7 @@ export default function LocalisationPage() {
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
                 Le chalet est équipé d&apos;une boîte à clés sécurisée. Le code vous sera
-                transmis avant votre arrivée. Une arrivée sur rendez-vous est également possible.
+                transmis 24 h avant votre arrivée. Une arrivée sur rendez-vous est également possible.
               </p>
             </div>
 
