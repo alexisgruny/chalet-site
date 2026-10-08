@@ -3,7 +3,7 @@ import Link from "next/link";
 import CallToAction from "@/components/section/callToAction";
 
 export const metadata = {
-  title: "Tarifs — Chalet Jaïa",
+  title: "Tarifs",
   description:
     "Tarifs de location du Chalet Jaïa à Gérardmer : prix à la semaine et au week-end, selon la saison.",
 };
@@ -88,7 +88,7 @@ export default function TarifsPage() {
       <section className="w-full relative">
         <div className="relative h-[40vh] min-h-[320px] w-full">
           <Image
-            src="/images/chalet/salon-salle-a-manger/salon-table-repas-tv-vue-large.jpg"
+            src="/images/chalet/salon/salon2.jpeg"
             alt="Chalet Jaïa — Tarifs"
             fill
             priority

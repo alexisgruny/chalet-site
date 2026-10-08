@@ -23,7 +23,7 @@ return (
         <li>• Lac de Gérardmer : baignade, pédalo, voile, canoë</li>
         <li>• Randonnées et VTT dans les Vosges</li>
         <li>• Lac de Longemer (Xonrupt)</li>
-        <li>• Parapente, Bol d'Air (La Bresse)</li>
+        <li>• Parapente, Bol d&apos;Air (La Bresse)</li>
       </ul>
     </div>
   </div>

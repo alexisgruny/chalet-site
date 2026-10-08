@@ -69,13 +69,37 @@ export default function ContactPage() {
     if (name === "name" && !value.trim()) error = "Le nom est requis.";
     else if (name === "email") {
       if (!value.trim()) error = "L'email est requis.";
-      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) error = "Email invalide.";
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim())) error = "Email invalide.";
     } else if (name === "message" && !value.trim()) error = "Le message est requis.";
     setFieldErrors((prev) => ({ ...prev, [name]: error }));
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    const errors: FieldErrors = {};
+    if (!form.name.trim()) errors.name = "Le nom est requis.";
+    if (!form.email.trim()) errors.email = "L'email est requis.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.trim())) {
+      errors.email = "Email invalide.";
+    }
+    if (!form.message.trim()) errors.message = "Le message est requis.";
+    setFieldErrors(errors);
+
+    const firstInvalid = (["name", "email", "message"] as const).find(
+      (field) => errors[field],
+    );
+    if (firstInvalid) {
+      document.getElementById(firstInvalid)?.focus();
+      return;
+    }
+    if (form.arrival && form.departure && form.departure <= form.arrival) {
+      setStatus("error");
+      setFeedback("La date de départ doit être après la date d'arrivée.");
+      document.getElementById("departure")?.focus();
+      return;
+    }
+
+    setFeedback("");
     setStatus("loading");
 
     try {
@@ -90,13 +114,14 @@ export default function ContactPage() {
         setStatus("success");
         setFeedback(data.message);
         setForm(INITIAL);
+        setFieldErrors({});
       } else {
         setStatus("error");
         setFeedback(data.message ?? "Une erreur est survenue.");
       }
     } catch {
       setStatus("error");
-      setFeedback("Impossible d&apos;envoyer le message. Réessayez plus tard.");
+      setFeedback("Impossible d’envoyer le message. Réessayez plus tard.");
     }
   }
 
@@ -106,7 +131,7 @@ export default function ContactPage() {
       <section className="w-full relative">
         <div className="relative h-[40vh] min-h-[320px] w-full">
           <Image
-            src="/images/chalet/cuisine/cuisine-four-table-fleurs.jpg"
+            src="/images/chalet/cuisine/cuisine1.jpg"
             alt="Contactez le Chalet Jaïa"
             fill
             priority
@@ -175,7 +200,7 @@ export default function ContactPage() {
 
                 {/* Feedback succès */}
                 {status === "success" && (
-                  <div className="mb-6 flex items-center gap-3 rounded-xl bg-green-50 border border-green-200 p-4 text-green-800">
+                  <div role="status" aria-live="polite" className="mb-6 flex items-center gap-3 rounded-xl bg-green-50 border border-green-200 p-4 text-green-800">
                     <CheckCircle className="h-5 w-5 flex-shrink-0" />
                     <p className="text-sm font-medium">{feedback}</p>
                   </div>
@@ -183,7 +208,7 @@ export default function ContactPage() {
 
                 {/* Feedback erreur */}
                 {status === "error" && (
-                  <div className="mb-6 flex items-center gap-3 rounded-xl bg-red-50 border border-red-200 p-4 text-red-800">
+                  <div role="alert" aria-live="assertive" className="mb-6 flex items-center gap-3 rounded-xl bg-red-50 border border-red-200 p-4 text-red-800">
                     <AlertCircle className="h-5 w-5 flex-shrink-0" />
                     <p className="text-sm font-medium">{feedback}</p>
                   </div>
@@ -202,15 +227,18 @@ export default function ContactPage() {
                         name="name"
                         type="text"
                         required
+                        maxLength={100}
                         autoComplete="name"
                         value={form.name}
+                        aria-invalid={Boolean(fieldErrors.name)}
+                        aria-describedby={fieldErrors.name ? "name-error" : undefined}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder="Jean Dupont"
                         className="input-field"
                       />
                       {fieldErrors.name && (
-                        <p className="mt-1 text-xs text-red-500">{fieldErrors.name}</p>
+                        <p id="name-error" className="mt-1 text-xs text-red-500">{fieldErrors.name}</p>
                       )}
                     </div>
                     <div>
@@ -222,15 +250,18 @@ export default function ContactPage() {
                         name="email"
                         type="email"
                         required
+                        maxLength={254}
                         autoComplete="email"
                         value={form.email}
+                        aria-invalid={Boolean(fieldErrors.email)}
+                        aria-describedby={fieldErrors.email ? "email-error" : undefined}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         placeholder="jean@example.com"
                         className="input-field"
                       />
                       {fieldErrors.email && (
-                        <p className="mt-1 text-xs text-red-500">{fieldErrors.email}</p>
+                        <p id="email-error" className="mt-1 text-xs text-red-500">{fieldErrors.email}</p>
                       )}
                     </div>
                   </div>
@@ -244,6 +275,7 @@ export default function ContactPage() {
                       id="phone"
                       name="phone"
                       type="tel"
+                      maxLength={30}
                       autoComplete="tel"
                       value={form.phone}
                       onChange={handleChange}
@@ -262,6 +294,7 @@ export default function ContactPage() {
                         id="arrival"
                         name="arrival"
                         type="date"
+                        max={form.departure || undefined}
                         value={form.arrival}
                         onChange={handleChange}
                         className="input-field"
@@ -275,6 +308,7 @@ export default function ContactPage() {
                         id="departure"
                         name="departure"
                         type="date"
+                        min={form.arrival || undefined}
                         value={form.departure}
                         onChange={handleChange}
                         className="input-field"
@@ -296,7 +330,7 @@ export default function ContactPage() {
                         className="input-field appearance-none pr-10"
                       >
                         <option value="">Sélectionner</option>
-                        {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+                        {[1, 2, 3, 4, 5, 6].map((n) => (
                           <option key={n} value={n}>
                             {n} {n === 1 ? "personne" : "personnes"}
                           </option>
@@ -316,14 +350,17 @@ export default function ContactPage() {
                       name="message"
                       required
                       rows={5}
+                      maxLength={3000}
                       value={form.message}
+                      aria-invalid={Boolean(fieldErrors.message)}
+                      aria-describedby={fieldErrors.message ? "message-error" : undefined}
                       onChange={handleChange}
                       onBlur={handleBlur}
                       placeholder="Votre demande, question sur le chalet…"
                       className="input-field resize-none"
                     />
                     {fieldErrors.message && (
-                      <p className="mt-1 text-xs text-red-500">{fieldErrors.message}</p>
+                      <p id="message-error" className="mt-1 text-xs text-red-500">{fieldErrors.message}</p>
                     )}
                   </div>
 

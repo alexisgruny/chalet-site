@@ -2,7 +2,7 @@ import GalleryClient from "@/components/section/galleryClient";
 import CallToAction from "@/components/section/callToAction";
 
 export const metadata = {
-  title: "Galerie — Chalet Jaïa",
+  title: "Galerie",
   description: "Photos du Chalet Jaïa à Gérardmer : intérieur, extérieur, chambres, cuisine.",
 };
 

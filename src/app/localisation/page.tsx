@@ -4,7 +4,7 @@ import { Car, Train, Plane, MapPin, Clock, CircleParking, KeyRound } from "lucid
 import CallToAction from "@/components/section/callToAction";
 
 export const metadata = {
-  title: "Accès — Chalet Jaïa",
+  title: "Accès",
   description:
     "Comment accéder au Chalet Jaïa à Gérardmer : itinéraires en voiture, train et avion, parking, et instructions d'arrivée.",
 };
@@ -57,7 +57,7 @@ export default function LocalisationPage() {
       <section className="w-full relative">
         <div className="relative h-[40vh] min-h-[320px] w-full">
           <Image
-            src="/images/chalet/salon-salle-a-manger/salon-poele-baies-vitrees-vue-village.jpg"
+            src="/images/chalet/exterieur/exterieur1.jpg"
             alt="Accès au Chalet Jaïa"
             fill
             priority

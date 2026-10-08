@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-16">
+    <section className="relative h-[100svh] min-h-[32rem] w-full -mt-16 overflow-hidden">
       {/* Image */}
       <Image
-        src="/images/chalet/salon-salle-a-manger/salon-poele-baies-vitrees-vosges.jpg"
+        src="/images/chalet/salon/salon1.jpeg"
         alt="Chalet à la montagne"
         fill
         priority

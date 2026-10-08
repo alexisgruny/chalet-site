@@ -1,45 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { navLinks } from "@/lib/routes";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [visible, setVisible] = useState(true);
-  const [lastScroll, setLastScroll] = useState(0);
   const [open, setOpen] = useState(false);
+  const lastScroll = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
 
-      // Si on scroll vers le bas → cacher
-      if (currentScroll > lastScroll && currentScroll > 80) {
-        setVisible(false);
-      }
-      // Si on scroll vers le haut → montrer
-      else {
-        setVisible(true);
-      }
-
-      setLastScroll(currentScroll);
+      setVisible(currentScroll <= lastScroll.current || currentScroll <= 80 || open);
+      lastScroll.current = currentScroll;
     };
 
     const handleMouseMove = (e: MouseEvent) => {
-      // Si la souris est proche du haut → montrer
-      if (e.clientY < 60) {
-        setVisible(true);
-      }
+      if (e.clientY < 60) setVisible(true);
+    };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
     };
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [lastScroll]);
+  }, [open]);
 
   return (
     <header
@@ -50,20 +47,24 @@ export default function Navbar() {
       `}
     >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl text-[#3a4b3c]"> Chalet Jaïa</Link>
+        <Link href="/" onClick={() => setOpen(false)} className="font-bold text-xl text-[#3a4b3c]">
+          Chalet Jaïa
+        </Link>
         <button
           className="md:hidden text-[#3a4b3c] p-2 -mr-2"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           <span className="text-2xl leading-none" aria-hidden="true">{open ? "✕" : "☰"}</span>
         </button>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav aria-label="Navigation principale" className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
+              aria-current={pathname === link.href ? "page" : undefined}
               className="text-[#3a4b3c]/70 hover:text-[#3a4b3c] transition"
             >
               {link.label}
@@ -85,31 +86,33 @@ export default function Navbar() {
         )}
 
         {/* Menu mobile */}
-        {open && (
-          <div className="md:hidden absolute top-full left-0 bg-[#3a4b3c] w-full border-t border-white/10 shadow-lg z-50">
-            <nav className="flex flex-col p-5 gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="text-white text-lg font-medium py-3 border-b border-white/10 last:border-0"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <div className="pt-4">
-                <Link
-                  href="/contact"
-                  onClick={() => setOpen(false)}
-                  className="btn-secondary flex items-center justify-center w-full"
-                >
-                  Réserver
-                </Link>
-              </div>
-            </nav>
-          </div>
-        )}
+        <div
+          id="mobile-navigation"
+          className={`md:hidden absolute top-full left-0 bg-[#3a4b3c] w-full border-t border-white/10 shadow-lg z-50 ${open ? "" : "hidden"}`}
+        >
+          <nav aria-label="Navigation mobile" className="flex flex-col p-5 gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                aria-current={pathname === link.href ? "page" : undefined}
+                className="text-white text-lg font-medium py-3 border-b border-white/10 last:border-0"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="pt-4">
+              <Link
+                href="/contact"
+                onClick={() => setOpen(false)}
+                className="btn-secondary flex items-center justify-center w-full"
+              >
+                Réserver
+              </Link>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
   );

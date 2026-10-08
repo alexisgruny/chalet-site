@@ -33,8 +33,8 @@ export default function Sleeping() {
       <div className="container-section">
         <h2 className="title-section-green">Couchages</h2>
         <p className="text-white/70 mb-8 max-w-2xl">
-          Le chalet accueille jusqu'à 6 personnes réparties sur 3 espaces nuit distincts.
-          Lits faits et linge fourni à l'arrivée.
+          Le chalet accueille jusqu&apos;à 6 personnes réparties sur 3 espaces nuit distincts.
+          Lits faits et linge fourni à l&apos;arrivée.
         </p>
 
         <div className="grid gap-4 md:grid-cols-3">

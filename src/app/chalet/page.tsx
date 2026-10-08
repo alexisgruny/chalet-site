@@ -10,7 +10,7 @@ import Sleeping from "@/components/section/sleeping";
 import Services from "@/components/section/services";
 
 export const metadata = {
-  title: "Le chalet — Chalet Jaïa",
+  title: "Le chalet",
   description:
     "Présentation du Chalet Jaïa à Gérardmer : couchages, équipements, services et informations pratiques.",
 };

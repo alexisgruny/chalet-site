@@ -41,7 +41,7 @@ export default function Services() {
       <div className="container-section relative">
         <h2 className="title-section-green">Services</h2>
         <p className="text-white/70 mb-8 max-w-2xl">
-          Tout est pensé pour que vous n'ayez à vous occuper de rien dès votre arrivée.
+          Tout est pensé pour que vous n&apos;ayez à vous occuper de rien dès votre arrivée.
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -5,19 +5,19 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "À quelle distance est le lac de Gérardmer&nbsp;?",
+    q: "À quelle distance est le lac de Gérardmer\u00a0?",
     a: "Le chalet se situe à environ 7 km du lac de Gérardmer, soit 10 minutes en voiture.",
   },
   {
-    q: "Le linge est-il fourni&nbsp;?",
+    q: "Le linge est-il fourni\u00a0?",
     a: "Oui : les lits sont faits à votre arrivée et les serviettes sont fournies.",
   },
   {
-    q: "L'arrivée est-elle autonome&nbsp;?",
+    q: "L'arrivée est-elle autonome\u00a0?",
     a: "Oui, grâce à une boîte à clés sécurisée. Le code vous est transmis 24 h avant votre arrivée.",
   },
   {
-    q: "Peut-on recharger une voiture électrique&nbsp;?",
+    q: "Peut-on recharger une voiture électrique\u00a0?",
     a: "Oui, le chalet dispose d'une borne de recharge disponible en supplément (25 €/sem., prix à confirmer).",
   },
 ];
@@ -41,8 +41,9 @@ export default function FAQ() {
               >
                 <span
                   className="font-semibold text-[#3a4b3c] text-sm sm:text-base"
-                  dangerouslySetInnerHTML={{ __html: q }}
-                />
+                >
+                  {q}
+                </span>
                 <ChevronDown
                   className={`h-5 w-5 text-[#3a4b3c]/50 flex-shrink-0 transition-transform duration-200 ${
                     open === i ? "rotate-180" : ""

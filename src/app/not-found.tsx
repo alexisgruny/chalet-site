@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MapPin } from "lucide-react";
 
 export const metadata = {
-  title: "Page introuvable — Chalet Jaïa",
+  title: "Page introuvable",
 };
 
 export default function NotFound() {
