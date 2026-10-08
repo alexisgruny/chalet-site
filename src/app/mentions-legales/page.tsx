@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Mentions légales",
-  description: "Mentions légales du site Chalet Jaïa — location à Gérardmer.",
-};
+  description: "Mentions légales et informations sur l'éditeur du site du Chalet Jaïa à Gérardmer.",
+  path: "/mentions-legales",
+});
 
 export default function MentionsLegalesPage() {
   return (

@@ -1,44 +1,56 @@
 import type { MetadataRoute } from "next";
-
-const BASE_URL = "https://chalet-jaia.fr";
+import { SITE_URL } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const pages: {
+    path: string;
+    changeFrequency: NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
+    priority: number;
+  }[] = [
     {
-      url: BASE_URL,
-      lastModified: new Date("2025-06-01"),
+      path: "",
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${BASE_URL}/chalet`,
-      lastModified: new Date("2025-06-01"),
+      path: "/chalet",
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/tarifs`,
-      lastModified: new Date("2025-06-01"),
+      path: "/tarifs",
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/galerie`,
-      lastModified: new Date("2025-06-01"),
+      path: "/galerie",
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/localisation`,
-      lastModified: new Date("2025-06-01"),
+      path: "/localisation",
       changeFrequency: "yearly",
       priority: 0.6,
     },
     {
-      url: `${BASE_URL}/contact`,
-      lastModified: new Date("2025-06-01"),
+      path: "/contact",
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    {
+      path: "/mentions-legales",
+      changeFrequency: "yearly",
+      priority: 0.2,
+    },
+    {
+      path: "/politique-confidentialite",
+      changeFrequency: "yearly",
+      priority: 0.2,
+    },
   ];
+
+  return pages.map(({ path, ...metadata }) => ({
+    url: `${SITE_URL}${path}`,
+    ...metadata,
+  }));
 }

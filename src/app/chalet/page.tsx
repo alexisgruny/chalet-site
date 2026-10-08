@@ -8,12 +8,14 @@ import CallToAction from "@/components/section/callToAction";
 import Description from "@/components/section/description";
 import Sleeping from "@/components/section/sleeping";
 import Services from "@/components/section/services";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Le chalet",
   description:
-    "Présentation du Chalet Jaïa à Gérardmer : couchages, équipements, services et informations pratiques.",
-};
+    "Visitez le Chalet Jaïa à Gérardmer : 83 m², 6 couchages, chambres, coin montagne, équipements et services pour votre séjour dans les Vosges.",
+  path: "/chalet",
+});
 
 export default function ChaletPage() {
   return (

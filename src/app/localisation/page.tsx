@@ -2,12 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Car, Train, Plane, MapPin, Clock, CircleParking, KeyRound } from "lucide-react";
 import CallToAction from "@/components/section/callToAction";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Accès",
   description:
-    "Comment accéder au Chalet Jaïa à Gérardmer : itinéraires en voiture, train et avion, parking, et instructions d'arrivée.",
-};
+    "Préparez votre arrivée au Chalet Jaïa à Gérardmer : itinéraires, distances depuis le lac, les pistes et les gares, et informations de stationnement.",
+  path: "/localisation",
+});
 
 const distances = [
   { lieu: "Lac de Gérardmer", distance: "7 km", duree: "10 min" },

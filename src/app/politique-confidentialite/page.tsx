@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Politique de confidentialité",
-  description: "Politique de confidentialité et protection des données personnelles — Chalet Jaïa.",
-};
+  description:
+    "Consultez la politique de confidentialité du Chalet Jaïa : données collectées via le formulaire, durée de conservation et exercice de vos droits RGPD.",
+  path: "/politique-confidentialite",
+});
 
 export default function PolitiqueConfidentialitePage() {
   return (

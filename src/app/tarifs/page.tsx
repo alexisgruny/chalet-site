@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import CallToAction from "@/components/section/callToAction";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Tarifs",
   description:
-    "Tarifs de location du Chalet Jaïa à Gérardmer : prix à la semaine et au week-end, selon la saison.",
-};
+    "Consultez les tarifs de location du Chalet Jaïa à Gérardmer : prix à la semaine et au week-end, équipements inclus et conditions de réservation.",
+  path: "/tarifs",
+});
 
 const seasons = [
   {

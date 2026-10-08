@@ -1,52 +1,52 @@
 import "@/styles/globals.css";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import type { Metadata } from "next";
+import { SITE_URL, SOCIAL_IMAGE } from "@/lib/seo";
 
-export const metadata = {
-  // ── À personnaliser avec les infos du client ────────────────────────────
+export const metadata: Metadata = {
   title: {
     default: "Chalet Jaïa — Location à Gérardmer",
-    template: "%s — Chalet Jaïa",          // ex: "Tarifs — Chalet Jaïa"
+    template: "%s — Chalet Jaïa",
   },
   description:
-    "Louez le Chalet Jaïa à Gérardmer : 83 m², 6 personnes, poêle à pellets, wifi, borne électrique. À 7 km du lac et des pistes.",
-
-  metadataBase: new URL("https://chalet-jaia.fr"), // ← remplacer par le vrai domaine
-
+    "Louez le Chalet Jaïa à Gérardmer : chalet de 83 m² pour 6 personnes, à 7 km du lac et des pistes. Découvrez les équipements, tarifs et disponibilités.",
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   openGraph: {
     title: "Chalet Jaïa — Location à Gérardmer",
     description:
-      "Louez le Chalet Jaïa à Gérardmer : 83 m², 6 personnes, poêle à pellets, wifi, borne électrique. À 7 km du lac et des pistes.",
-    url: "https://chalet-jaia.fr",
+      "Louez le Chalet Jaïa à Gérardmer : chalet de 83 m² pour 6 personnes, à 7 km du lac et des pistes.",
+    url: SITE_URL,
     siteName: "Chalet Jaïa",
     locale: "fr_FR",
     type: "website",
     images: [
       {
-        url: "/images/chalet/salon/salon1.jpeg",
+        url: SOCIAL_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Chalet Jaïa à Gérardmer",
+        alt: "Le Chalet Jaïa, location de vacances à Gérardmer",
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Chalet Jaïa — Location à Gérardmer",
     description:
-      "Louez le Chalet Jaïa à Gérardmer : 83 m², 6 personnes, poêle à pellets, wifi, borne électrique.",
-    images: ["/images/chalet/salon/salon1.jpeg"],
+      "Chalet de 83 m² pour 6 personnes à Gérardmer, à 7 km du lac et des pistes.",
+    images: [SOCIAL_IMAGE],
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
+  "@type": ["LodgingBusiness", "VacationRental"],
   "name": "Chalet Jaïa",
-  "description": "Chalet chaleureux à Gérardmer pour 6 personnes, 83 m², poêle à pellets, wifi, borne électrique.",
-  "url": "https://chalet-jaia.fr",
-  "image": "https://chalet-jaia.fr/images/chalet/salon/salon1.jpeg",
+  "description": "Chalet de vacances de 83 m² à Gérardmer, pouvant accueillir jusqu'à 6 personnes, à 7 km du lac et des pistes.",
+  "url": SITE_URL,
+  "image": `${SITE_URL}${SOCIAL_IMAGE}`,
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Gérardmer",
@@ -73,7 +73,9 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
         />
       </head>
       <body>
