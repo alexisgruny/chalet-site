@@ -179,8 +179,9 @@ export async function POST(req: NextRequest) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const contactEmail = process.env.CONTACT_EMAIL;
-  if (!apiKey || !contactEmail) {
-    console.error("Missing env: RESEND_API_KEY or CONTACT_EMAIL");
+  const fromEmail = process.env.RESEND_FROM_EMAIL;
+  if (!apiKey || !contactEmail || !fromEmail) {
+    console.error("Missing env: RESEND_API_KEY, CONTACT_EMAIL, or RESEND_FROM_EMAIL");
     return NextResponse.json(
       { success: false, message: "Erreur de configuration serveur." },
       { status: 500 }
@@ -190,7 +191,7 @@ export async function POST(req: NextRequest) {
   try {
     const resend = new Resend(apiKey);
     const { error: sendError } = await resend.emails.send({
-      from: "Chalet Jaïa <onboarding@resend.dev>",
+      from: fromEmail,
       to: contactEmail,
       replyTo: payload.email,
       subject: `Nouvelle demande de ${payload.name.replace(/[\r\n]+/g, " ")}`,
@@ -206,7 +207,7 @@ export async function POST(req: NextRequest) {
 
     try {
       const { error: confirmationError } = await resend.emails.send({
-        from: "Chalet Jaïa <onboarding@resend.dev>",
+        from: fromEmail,
         to: payload.email,
         subject: "Nous avons bien reçu votre message — Chalet Jaïa",
         text: buildConfirmationText(payload.name),

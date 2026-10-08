@@ -32,6 +32,7 @@ Créer un fichier `.env.local` à la racine :
 ```env
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxx
 CONTACT_EMAIL=email-du-proprietaire@example.com
+RESEND_FROM_EMAIL=Chalet Jaïa <onboarding@resend.dev>
 ```
 
 Lancer le serveur de développement :
@@ -40,13 +41,16 @@ Lancer le serveur de développement :
 npm run dev
 ```
 
-## Déploiement (Vercel)
+Tant que le domaine du chalet n'est pas acheté et vérifié dans Resend, utilisez l'adresse de test `onboarding@resend.dev` pour `RESEND_FROM_EMAIL`. Resend limite alors les envois aux adresses autorisées sur le compte. Une fois le domaine acheté, ajoutez-le et vérifiez-le dans Resend, configurez ses DNS, puis définissez une adresse d'expédition sur ce domaine. `CONTACT_EMAIL` doit être une adresse existante du propriétaire.
+
+## Déploiement (Netlify)
 
 1. Pusher sur GitHub
-2. Importer le projet sur [vercel.com](https://vercel.com)
-3. Ajouter les variables d'environnement dans **Settings → Environment Variables** :
+2. Importer le projet sur [netlify.com](https://www.netlify.com/)
+3. Ajouter les variables d'environnement dans la configuration du projet :
    - `RESEND_API_KEY`
    - `CONTACT_EMAIL`
+   - `RESEND_FROM_EMAIL`
 4. Redéployer
 
 ## Mettre à jour le contenu
@@ -61,7 +65,7 @@ Remplacer les images dans `public/images/chalet/`. Idéalement en **WebP**, comp
 Quand le domaine est finalisé, mettre à jour :
 - `metadataBase` dans `src/app/layout.tsx`
 - L'URL dans `src/app/robots.ts`
-- Le champ `from` dans `src/app/api/contact/route.ts` (après vérification du domaine sur Resend)
+- Vérifier le domaine dans Resend, configurer ses enregistrements DNS et mettre à jour `RESEND_FROM_EMAIL` dans les variables d'environnement
 
 ## Structure
 
