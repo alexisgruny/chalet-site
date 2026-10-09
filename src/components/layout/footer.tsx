@@ -91,6 +91,17 @@ export default function Footer() {
           Confidentialité
         </a>
       </div>
+      <p>
+        Site réalisé par{" "}
+        <a
+          href="https://alexisgrunyportfolio.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#3a4b3c] transition"
+        >
+          Alexis Gruny
+        </a>
+      </p>
     </div>
 
   </div>
