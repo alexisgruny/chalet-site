@@ -59,7 +59,7 @@ const amenities: {
     title: "Famille",
     icon: Baby,
     items: [
-      "Lit parapluie avec draps, sur demande",
+      "Lit parapluie avec drap-housse, sur demande",
       "Chaise haute pliable, sur demande",
       "Baignoire pour bébé, sur demande",
       "Table à langer",
