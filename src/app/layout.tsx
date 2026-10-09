@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer";
 import type { Metadata } from "next";
 import { SITE_URL, SOCIAL_IMAGE } from "@/lib/seo";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
@@ -86,6 +87,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
