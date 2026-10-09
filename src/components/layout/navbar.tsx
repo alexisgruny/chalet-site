@@ -59,7 +59,6 @@ export default function Navbar() {
             width={48}
             height={41}
             priority
-            className="rounded bg-white/70"
           />
           Chalet Jaïa
         </Link>
