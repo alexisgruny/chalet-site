@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -47,7 +48,19 @@ export default function Navbar() {
       `}
     >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" onClick={() => setOpen(false)} className="font-bold text-xl text-[#3a4b3c]">
+        <Link
+          href="/"
+          onClick={() => setOpen(false)}
+          className="flex items-center gap-2 font-bold text-xl text-[#3a4b3c]"
+        >
+          <Image
+            src="/images/logo/logo-chalet-jaia-transparent.png"
+            alt=""
+            width={48}
+            height={41}
+            priority
+            className="rounded bg-white/70"
+          />
           Chalet Jaïa
         </Link>
         <button
