@@ -45,7 +45,12 @@ const amenities: {
   {
     title: "Divertissement",
     icon: BookOpen,
-    items: ["Livres"],
+    items: [
+      "Télévision",
+      "Tourne-disque et système audio Bluetooth",
+      "Livres",
+      "Jeux de société",
+    ],
   },
   {
     title: "Famille",
