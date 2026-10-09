@@ -29,6 +29,22 @@ export default function Footer() {
               chaletjaia@gmail.com
             </a>
           </li>
+          <li>
+            <a
+              href="https://www.facebook.com/share/19bM1jPtwt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:text-[#3a4b3c] transition"
+            >
+              <span
+                aria-hidden="true"
+                className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1877F2] text-xs font-bold text-white"
+              >
+                f
+              </span>
+              Suivez-nous sur Facebook
+            </a>
+          </li>
           <li className="text-[#3a4b3c]/70">
             Gérardmer, Vosges
           </li>

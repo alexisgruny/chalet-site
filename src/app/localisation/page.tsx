@@ -203,7 +203,15 @@ export default function LocalisationPage() {
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
                 Le chalet est équipé d&apos;une boîte à clés sécurisée. Le code vous sera
-                transmis 24 h avant votre arrivée. Une arrivée sur rendez-vous est également possible.
+                transmis 24 h avant votre arrivée. Une arrivée sur rendez-vous est également
+                possible avec la conciergerie Marguerite &amp; Suzanne :{" "}
+                <a
+                  href="tel:+33788453169"
+                  className="text-white underline underline-offset-2"
+                >
+                  07 88 45 31 69
+                </a>
+                .
               </p>
             </div>
 

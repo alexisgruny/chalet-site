@@ -43,10 +43,11 @@ const included = [
   "Wi-Fi haut débit",
   "Parking privé gratuit",
   "Local vélo / ski sécurisé",
-  "Arrivée autonome (boîte à clés)",
+  "Arrivée autonome : le code de la boîte à clés vous sera transmis avant votre arrivée",
 ];
 
 const supplements = [
+  "Forfait ménage de fin de séjour obligatoire : 120 €",
   "Taxe de séjour en sus (par personne et par nuit)",
   "Borne de recharge électrique : 25 € le week-end, 45 € la semaine",
 ];
@@ -62,7 +63,7 @@ const conditions = [
   },
   {
     title: "Caution",
-    body: "Caution par carte bancaire (Stripe), restituée 1 semaine après la fin du séjour.",
+    body: "Une empreinte bancaire est effectuée par carte (via Stripe) : le montant est temporairement bloqué, mais non débité. Il est libéré une semaine après la fin du séjour.",
   },
   {
     title: "Animaux",
@@ -74,7 +75,11 @@ const conditions = [
   },
   {
     title: "Arrivée / Départ",
-    body: "Arrivée dès 16 h, départ avant 10 h.",
+    body: "Arrivée dès 16 h, départ à 10 h.",
+  },
+  {
+    title: "Arrivée sur rendez-vous",
+    body: "Une arrivée sur rendez-vous est également possible avec la conciergerie Marguerite & Suzanne, au 07 88 45 31 69.",
   },
   {
     title: "Taxe de séjour",
