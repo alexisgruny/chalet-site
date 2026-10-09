@@ -30,7 +30,7 @@ const galleryFolders: {
     {
         directory: "chambre-bas",
         category: "Chambre du bas",
-        files: ["chambre4.jpg", "chambre5.jpg", "chambre7.jpg", "image00005.jpeg", "IMG-20260908-WA0092.jpg", "IMG-20260908-WA0098.jpg", "IMG-20260908-WA0183 (1).jpg"],
+        files: ["chambre4.jpg", "chambre5.jpg", "chambre7.jpg", "IMG-20260908-WA0092.jpg", "IMG-20260908-WA0098.jpg", "IMG-20260908-WA0183 (1).jpg"],
     },
     {
         directory: "chambre-haut",

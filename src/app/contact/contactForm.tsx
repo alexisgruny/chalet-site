@@ -187,10 +187,8 @@ export default function ContactPage() {
 
               <div className="card mt-6 text-sm text-muted space-y-2">
                 <p>
-                  L&apos;adresse exacte du chalet vous sera communiquée 24 h avant
-                  votre arrivée.
+                  L&apos;adresse exacte du chalet vous sera communiquée avant votre arrivée.
                 </p>
-                <p>Réponse garantie sous 24 h.</p>
               </div>
             </div>
 
