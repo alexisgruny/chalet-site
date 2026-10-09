@@ -28,8 +28,11 @@ const amenities: {
     title: "Chambres",
     icon: BedDouble,
     items: [
+      "2 lits doubles 160 × 200",
+      "2 lits simples 80 × 190",
       "Dressing",
       "Volet roulant",
+      "Linge de lit",
     ],
   },
   {
