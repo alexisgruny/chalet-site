@@ -47,7 +47,6 @@ const included = [
 ];
 
 const supplements = [
-  "Forfait ménage de fin de séjour en option : 120 €",
   "Taxe de séjour en sus (par personne et par nuit)",
   "Borne de recharge électrique : 25 € le week-end, 45 € la semaine",
 ];
@@ -116,7 +115,7 @@ export default function TarifsPage() {
         <div className="container-section">
           <h2 className="title-section-beige">Prix selon la saison</h2>
           <p className="text-muted mb-8 max-w-2xl">
-            Linge et Wi-Fi inclus. Forfait ménage de fin de séjour en option : 120 €.
+            Linge et Wi-Fi inclus. Forfait ménage de fin de séjour obligatoire : 120 €.
           </p>
 
           <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 max-w-5xl mx-auto">

@@ -15,7 +15,7 @@ const services = [
     items: [
       "Lits faits à votre arrivée",
       "Serviettes et draps fournis",
-      "Forfait ménage de fin de séjour en option : 120 €",
+      "Forfait ménage de fin de séjour obligatoire : 120 €",
       "Ménage pendant le séjour sur demande (en supplément)",
     ],
   },

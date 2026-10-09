@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 
 export default function Description() {
@@ -50,9 +49,6 @@ export default function Description() {
           <div>• Lits faits & serviettes fournis</div>
           <div>• Arrivée autonome</div>
         </div>
-              <Link href="/chalet" className="btn-secondary gap-2 mt-4">
-                Voir les détails du chalet
-              </Link>
       </div>
     </div>
   </div>
