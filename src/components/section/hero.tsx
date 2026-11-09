@@ -32,6 +32,10 @@ export default function Hero() {
             <p className="text-white/90 text-lg">
               6 personnes • vue panoramique sur les Vosges
             </p>
+            <div className="space-y-1 text-sm text-white/85">
+              <p>Numéro d’enregistrement meublé de tourisme : N° 88196 26 0134 G8</p>
+              <p>Annonce d’un particulier</p>
+            </div>
             <div className="flex flex-wrap gap-2">
               {["Poêle à pellets", "Climatisation", "Parking", "Wifi"].map((t) => (
                 <span key={t} className="bg-white/15 text-white px-3 py-1 rounded-full text-sm backdrop-blur">
@@ -55,6 +59,10 @@ export default function Hero() {
           <p className="text-white/85 text-base">
             6 personnes • vue panoramique sur les Vosges
           </p>
+          <div className="space-y-1 text-sm text-white/85">
+            <p>Numéro d’enregistrement meublé de tourisme : N° 88196 26 0134 G8</p>
+            <p>Annonce d’un particulier</p>
+          </div>
           <div className="flex flex-wrap gap-2">
             {["Poêle à pellets", "Climatisation", "Parking", "Wifi"].map((t) => (
               <span key={t} className="bg-white/15 text-white px-3 py-1 rounded-full text-sm backdrop-blur">

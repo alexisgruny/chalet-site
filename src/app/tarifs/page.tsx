@@ -43,7 +43,7 @@ const included = [
   "Wi-Fi haut débit",
   "Parking privé gratuit",
   "Local vélo / ski sécurisé",
-  "Arrivée autonome : le code de la boîte à clés vous sera transmis avant votre arrivée",
+  "Arrivée autonome (code transmis avant votre arrivée) ou accueil personnalisé sur rendez-vous par notre service de conciergerie",
 ];
 
 const supplements = [
@@ -74,12 +74,16 @@ const conditions = [
     body: "Annulation gratuite jusqu'à 30 jours avant. Au-delà, l'acompte est conservé.",
   },
   {
+    title: "Séjour écourté",
+    body: "En cas de séjour écourté, le prix correspondant au coût de l’hébergement reste intégralement acquis au propriétaire",
+  },
+  {
     title: "Arrivée / Départ",
     body: "Arrivée dès 16 h, départ à 10 h.",
   },
   {
-    title: "Arrivée sur rendez-vous",
-    body: "Une arrivée sur rendez-vous est également possible avec la conciergerie Marguerite & Suzanne, au 07 88 45 31 69.",
+    title: "Accueil personnalisé",
+    body: "Notre service de conciergerie vous accueille en personne pour vous remettre les clés et vous présenter les lieux. Prise de rendez-vous avec Morgan au 07 88 45 31 69.",
   },
   {
     title: "Taxe de séjour",

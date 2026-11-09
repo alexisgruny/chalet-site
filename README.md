@@ -8,6 +8,7 @@ Site vitrine pour la location du Chalet Jaïa à Gérardmer (Vosges). Construit 
 - **TypeScript**
 - **Tailwind CSS 4**
 - **Resend** — envoi des emails du formulaire de contact
+- **Stripe** — socle serveur prêt pour l'intégration des paiements
 - **Lucide React** — icônes
 
 ## Pages
@@ -33,7 +34,10 @@ Créer un fichier `.env.local` à la racine :
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxx
 CONTACT_EMAIL=email-du-proprietaire@example.com
 RESEND_FROM_EMAIL=Chalet Jaïa <onboarding@resend.dev>
+STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxxxxx
 ```
+
+La clé Stripe se récupère dans le [tableau de bord Stripe](https://dashboard.stripe.com/apikeys). Utiliser la clé de test (`sk_test_...`) pendant le développement et la conserver uniquement côté serveur. Le SDK est disponible via `getStripe()` dans `src/lib/stripe.ts`. Le parcours de réservation, la création des paiements et le traitement des webhooks restent à définir avant d'activer les encaissements.
 
 Lancer le serveur de développement :
 
@@ -51,6 +55,7 @@ Tant que le domaine du chalet n'est pas acheté et vérifié dans Resend, utilis
    - `RESEND_API_KEY`
    - `CONTACT_EMAIL`
    - `RESEND_FROM_EMAIL`
+   - `STRIPE_SECRET_KEY` (uniquement lorsque le parcours de paiement sera activé)
 4. Redéployer
 
 ## Mettre à jour le contenu

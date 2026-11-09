@@ -47,7 +47,7 @@ export default function Description() {
           <div>• Poêle à pellets & climatisation</div>
           <div>• Cuisine entièrement équipée</div>
           <div>• Lits faits & serviettes fournis</div>
-          <div>• Arrivée autonome</div>
+          <div>• Arrivée autonome ou accueil personnalisé</div>
         </div>
       </div>
     </div>

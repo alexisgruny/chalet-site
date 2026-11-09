@@ -2,7 +2,7 @@ const services = [
   {
     title: "Conciergerie à la carte",
     items: [
-      "Arrivée autonome ou sur rendez-vous",
+      "Arrivée autonome ou accueil personnalisé",
       "Livraison de vos courses et du petit-déjeuner",
       "Baby-sitting",
       "Réservation d'activités et organisation d'événements",

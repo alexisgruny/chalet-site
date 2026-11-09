@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "L'arrivée est-elle autonome\u00a0?",
-    a: "Oui, grâce à une boîte à clés sécurisée. Le code vous sera transmis avant votre arrivée.",
+    a: "Oui, grâce à une boîte à clés sécurisée dont le code vous sera transmis avant votre arrivée. Un accueil personnalisé par notre service de conciergerie est également possible sur rendez-vous.",
   },
   {
     q: "Peut-on recharger une voiture électrique\u00a0?",

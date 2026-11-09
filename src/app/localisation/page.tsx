@@ -199,12 +199,12 @@ export default function LocalisationPage() {
             <div className="card-dark space-y-2">
               <div className="flex items-center gap-3 mb-3">
                 <KeyRound className="h-5 w-5 text-[#EBE2D6]" />
-                <h3 className="font-bold text-white">Arrivée autonome ou sur rendez-vous</h3>
+                <h3 className="font-bold text-white">Arrivée autonome ou accueil personnalisé</h3>
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
                 Le chalet est équipé d&apos;une boîte à clés sécurisée. Le code vous sera
-                transmis avant votre arrivée. Une arrivée sur rendez-vous est également
-                possible avec la conciergerie Marguerite &amp; Suzanne :{" "}
+                transmis avant votre arrivée. Notre service de conciergerie peut aussi vous
+                accueillir en personne sur rendez-vous :{" "}
                 <a
                   href="tel:+33788453169"
                   className="text-white underline underline-offset-2"

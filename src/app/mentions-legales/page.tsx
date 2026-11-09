@@ -33,6 +33,15 @@ export default function MentionsLegalesPage() {
           </div>
 
           <div className="card">
+            <h2 className="font-semibold text-[#3a4b3c] text-lg mb-3">Activité</h2>
+            <div className="space-y-1 text-sm text-muted">
+              <p>L’activité de la location meublée de tourisme est déclarée conformément à la législation en vigueur.</p>
+              <p>Numéro d’enregistrement de l’hébergement N° 88196 26 0134 G8.</p>
+              <p>Activité exercée sous le statut LMNP - N° DE SIRET : 108 775 602</p>
+            </div>
+          </div>
+
+          <div className="card">
             <h2 className="font-semibold text-[#3a4b3c] text-lg mb-3">Hébergeur</h2>
             <div className="space-y-1 text-sm text-muted">
               <p><strong>Vercel Inc.</strong></p>
