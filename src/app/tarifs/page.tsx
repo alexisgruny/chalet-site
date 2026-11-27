@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Availability from "@/components/section/availability";
 import CallToAction from "@/components/section/callToAction";
 import { createPageMetadata } from "@/lib/seo";
+
+// Le calendrier des disponibilités est régénéré au plus toutes les 15 min.
+export const revalidate = 900;
 
 export const metadata = createPageMetadata({
   title: "Tarifs",
@@ -223,6 +227,9 @@ export default function TarifsPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Disponibilités ── */}
+      <Availability className="section-beige pt-0" />
 
       {/* ── CTA ── */}
       <CallToAction hideTarifs />
