@@ -1,0 +1,27 @@
+name: Synchro calendriers iCal
+
+# Vercel Cron (offre Hobby) est limité à une exécution par jour :
+# on appelle donc la route de synchro depuis GitHub Actions toutes les 30 min.
+# Secrets requis (Settings → Secrets and variables → Actions) :
+#   SITE_URL     ex. https://chalet-jaia.vercel.app (sans / final)
+#   CRON_SECRET  identique à la variable CRON_SECRET sur Vercel
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Appeler /api/cron/sync-calendars
+        env:
+          SITE_URL: ${{ secrets.SITE_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          curl --fail-with-body --silent --show-error --max-time 90 \
+            -H "Authorization: Bearer $CRON_SECRET" \
+            "$SITE_URL/api/cron/sync-calendars"
