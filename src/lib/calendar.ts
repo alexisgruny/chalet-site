@@ -104,6 +104,28 @@ export async function findOverlaps(start: string, end: string): Promise<BlockedP
   );
 }
 
+/**
+ * Plages occupées à venir (directes + importées), fusionnées et anonymisées :
+ * seules les dates sortent, jamais la source, l'UID ou la note.
+ */
+export async function getBlockedRanges(today: string): Promise<{ start: string; end: string }[]> {
+  const [direct, external] = await Promise.all([getDirectBookings(), getExternalCalendars()]);
+  const periods = [...direct, ...external.flatMap((calendar) => calendar.periods)]
+    .filter((period) => period.end > today)
+    .sort((a, b) => a.start.localeCompare(b.start));
+
+  const merged: { start: string; end: string }[] = [];
+  for (const { start, end } of periods) {
+    const last = merged.at(-1);
+    if (last && start <= last.end) {
+      if (end > last.end) last.end = end;
+    } else {
+      merged.push({ start, end });
+    }
+  }
+  return merged;
+}
+
 // ── Utilitaires ────────────────────────────────────────────────────────────
 
 export function isIsoDate(value: unknown): value is string {
